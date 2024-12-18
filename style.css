@@ -8,6 +8,7 @@ body {
     flex-direction: column; 
     min-height: 100vh; 
     background-color: greenyellow;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-inicio {
@@ -21,14 +22,8 @@ body {
     height: 60px;
 }
 
-.header-inicio>.header-logo {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
-}
-
 .header-inicio>.header-navegacao {
-    width: 35%;
+    width: 12%;
     display: flex; 
     justify-content: space-around;
 }
@@ -40,12 +35,15 @@ footer {
     padding: 0.7rem;
 }
 
-.links-externos {
-    display: flex; 
-    justify-content: space-around;
-}
-
 /* ------------------------- Página Inicial ------------------------- */
+
+.ifpr_pinhais{
+        display: flex;
+        max-width: 58%;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        justify-content: space-around;
+}
 
 .main-inicio {
     flex: 1;
@@ -102,6 +100,31 @@ footer {
     background-color: red;
     padding: 5px;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.footer .item img{
+    max-width: 5%;
+    margin-right: 10px;
+}
+
+.footer .instagram {
+    order: 1;
+}
+
+.footer .facebook {
+    order: 2;
+}
+
+.footer .institucional {
+    order: 3;
+}
+
 
 /* ------------------------- Página Sou Aluno ------------------------- */
 
