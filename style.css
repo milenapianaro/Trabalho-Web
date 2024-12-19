@@ -60,6 +60,22 @@ footer {
     width: 100%;
 }
 
+.futuro.calouro{
+    display: flex;
+    max-width: 10%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+
+.aluno{
+    display: flex;
+    max-width: 10%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+
 .banner-inicio { 
     width: 100%;
     background-color: rgba(255, 255, 255, 0.322); /* Fundo branco com transparência */
