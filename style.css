@@ -8,7 +8,6 @@ body {
     flex-direction: column; 
     min-height: 100vh; 
     background-color: greenyellow;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-inicio {
@@ -78,10 +77,11 @@ footer {
 
 .banner-inicio { 
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.322); /* Fundo branco com transparência */
+    background-color: rgb(0, 176, 80);
     text-align: center;
     margin-bottom: 2rem; /* Espaço abaixo do banner */
     padding: 7rem;
+    font-size: 28px;
 }
 
 .banner-inicio>#banner-logo {
@@ -116,31 +116,6 @@ footer {
     background-color: red;
     padding: 5px;
 }
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.footer .item img{
-    max-width: 5%;
-    margin-right: 10px;
-}
-
-.footer .instagram {
-    order: 1;
-}
-
-.footer .facebook {
-    order: 2;
-}
-
-.footer .institucional {
-    order: 3;
-}
-
 
 /* ------------------------- Página Sou Aluno ------------------------- */
 
@@ -235,4 +210,3 @@ footer {
     width: 100%; 
     padding: 5px;
 }
-
