@@ -8,6 +8,7 @@ body {
     flex-direction: column; 
     min-height: 100vh; 
     background-color: greenyellow;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-inicio {
@@ -36,6 +37,22 @@ footer {
 
 /* ------------------------- Página Inicial ------------------------- */
 
+.queroSerAluno{
+    display: flex;
+        max-width: 58%;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        justify-content: space-around;
+}
+
+.souAluno{
+    display: flex;
+    max-width: 58%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+
 .ifpr_pinhais{
         display: flex;
         max-width: 58%;
@@ -59,17 +76,9 @@ footer {
     width: 100%;
 }
 
-.futuro.calouro{
+.queroSerAluno{
     display: flex;
-    max-width: 10%;
-    flex-wrap: wrap;
-    margin-left: 10px;
-    justify-content: space-around;
-}
-
-.aluno{
-    display: flex;
-    max-width: 10%;
+    max-width: 100%;
     flex-wrap: wrap;
     margin-left: 10px;
     justify-content: space-around;
@@ -126,6 +135,34 @@ footer {
     align-items: center;
     padding-top: 60px;
     overflow-x: hidden;
+}
+
+.footer{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.footer .item {
+    max-width: 100px;
+}
+
+.footer .item img {
+    max-width: 20px;
+    height: auto;
+}
+
+.footer .instagram {
+    order: 1;
+}
+
+.footer .facebook {
+    order: 2;
+}
+
+.footer .institucional {
+    order: 3;
 }
 
 .banner-aluno { 
