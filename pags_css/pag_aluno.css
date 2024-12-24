@@ -61,15 +61,18 @@ body {
 
 .footer .instagram {
     order: 1;
+    color: rgba(255, 255, 255, 0.805);
 }
 
 .footer .facebook {
     order: 2;
+    color: rgba(255, 255, 255, 0.805);
 }
 
 .footer .institucional {
     order: 3;
     margin-right: 20px;
+    color: rgba(255, 255, 255, 0.805);
 }
 
 .banner-aluno { 

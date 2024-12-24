@@ -9,7 +9,7 @@ body {
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
-    background-color: greenyellow;
+    background-color: rgba(118, 232, 98, 0.955);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,12 +22,17 @@ body {
     width: 100%;
     top: 0;
     height: 60px;
+    /* box-shadow: 10px 10px 15px red;  A VALIDAR */
 }
 
 .header-inicio>.header-navegacao {
     width: 12%;
     display: flex; 
     justify-content: space-around;
+}
+
+.header-navegacao {
+    color: rgba(255, 255, 255, 0.805);
 }
 
 .footer{
@@ -52,15 +57,18 @@ body {
 
 .footer .instagram {
     order: 1;
+    color: rgba(255, 255, 255, 0.805);
 }
 
 .footer .facebook {
     order: 2;
+    color: rgba(255, 255, 255, 0.805);
 }
 
 .footer .institucional {
     order: 3;
     margin-right: 20px;
+    color: rgba(255, 255, 255, 0.805);
 }
 
 .queroSerAluno{
@@ -90,15 +98,23 @@ body {
 
 #faixa-vermelha {
     padding: 3px;
-    background-color: red;
+    background-color: #ce181e;
     width: 100%;
+}
+
+#faixa-vermelha-bottom {
+    padding: 3px;
+    background-color: #ce181e;
+    width: 100%;
+    margin-top: -38px;
+    margin-bottom: 50px;
 }
 
 .caixas-inicio a figure { 
     max-width: 100%; 
     height: auto; 
     margin-bottom: 1rem;
-    background-color: red;
+    background-color: #ce181e;
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -121,6 +137,8 @@ body {
     margin-bottom: 2rem;
     padding: 2rem;
     font-size: 20px;
+    color: white;
+    font-style: italic;
 }
 
 .banner-inicio p{
@@ -142,7 +160,7 @@ body {
 
 .caixas-inicio a {
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.322); 
+    background-color: rgb(0, 176, 80);
     text-decoration: none; 
     text-align: center;
     margin: 0 8rem;
@@ -150,4 +168,7 @@ body {
     flex-direction: column; 
     align-items: center;
     padding-bottom: 1rem;
+    color: white;
+    font-style: italic;
+    font-size: 35px;
 }
