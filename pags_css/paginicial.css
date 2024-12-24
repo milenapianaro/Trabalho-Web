@@ -98,13 +98,13 @@ body {
 
 #faixa-vermelha {
     padding: 3px;
-    background-color: red;
+    background-color: #ce181e;
     width: 100%;
 }
 
 #faixa-vermelha-bottom {
     padding: 3px;
-    background-color: red;
+    background-color: #ce181e;
     width: 100%;
     margin-top: -38px;
     margin-bottom: 50px;
@@ -114,7 +114,7 @@ body {
     max-width: 100%; 
     height: auto; 
     margin-bottom: 1rem;
-    background-color: red;
+    background-color: #ce181e;
     padding: 5px;
     display: flex;
     justify-content: center;
