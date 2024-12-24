@@ -1,36 +1,42 @@
-/* ------------------------- Página Quero Ser Aluno ------------------------- */
-
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body { 
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
-    background-color: lightgray
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
 }
 
-.header-inicio {
-    background-color: gray;
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     width: 100%;
-    top: 0;
     height: 60px;
+    position: sticky;
+    top: 0;
+    background-color: gray;
 }
 
-.header-inicio>.header-navegacao {
-    width: 12%;
+.header-navegacao {
+    width: 40%;
     display: flex; 
     justify-content: space-around;
 }
 
-.footer{
+.ifpr_pinhais{
+    display: flex;
+    max-width: 58%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+
+.footer {
     background-color: gray;
     display: flex; 
     justify-content: space-between;
@@ -69,13 +75,11 @@ body {
 
 /*--------------------------------------------------------------------*/
 
-.main-quero-ser { 
-    flex: 1; 
+.main-quero-ser {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
     align-self: center;
-    margin-top: 60px;
     background-color: whitesmoke;
     width: 90%;
     text-align: center;
