@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body { 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-navegacao {
+    width: 40%;
+    display: flex; 
+    justify-content: space-around;
+}
+
+.ifpr_pinhais{
+    display: flex;
+    max-width: 58%;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    justify-content: space-around;
+}
+
+.footer {
+    background-color: gray;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.footer .item {
+    display: flex; 
+    align-items: center;
+    max-width: 100px;
+}
+
+.footer .item img {
+    max-width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.footer .instagram {
+    order: 1;
+    color: rgba(255, 255, 255, 0.805);
+}
+
+.footer .facebook {
+    order: 2;
+    color: rgba(255, 255, 255, 0.805);
+}
+
+.footer .institucional {
+    order: 3;
+    margin-right: 20px;
+    color: rgba(255, 255, 255, 0.805);
+}
+
+
+/*--------------------------------------------------------------------*/
+
+main {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    align-self: center;
+    background-color: rgba(102, 206, 102, 0.955);
+    width: 100%;
+    text-align: center;
+
+}
+
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+h1, h2{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.desejo-contato { 
+    background-color: rgb(0, 176, 80);
+    width: 100%; 
+    padding: 5px; 
+    font-size: 25px;
+    text-align: center;
+    border: 3px solid black;
+} 
+
+.texto-contato{
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 17px;
+    text-justify: center;
+}
+
+/*--------------------------------------------------------------------*/
+
+.email-direcao-texto { 
+    width: 100%; 
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    border-radius: 1px;
+    border: 2px solid black;
+} 
+/*--------------------------------------------------------------------*/
+
+.email-tecnicos, .info, .adm {  
+    padding: 20px;
+    border: 20px;
+    text-align: center;
+    border: 1px solid black;
+} 
+
+.email-tecnicos-texto{ 
+    justify-content: space-between;
+    gap: 50px;
+    font-size: 17px;
+    text-align: left;
+    border: 2px solid black;
+    background: rgb(162, 237, 125);
+} 
+
+.email-docentes-texto { 
+    gap: 50px;
+    font-size: 17px;
+    text-align: right;
+    background: rgb(162, 237, 125);
+    border: 2px solid black;
+} 
+
+.email-tecnicos{  
+  background: #ce181e;
+} 
+
+.info{
+    background: rgb(62, 193, 237);
+}
+
+.adm{
+    background: rgb(255, 133, 46);
+}
