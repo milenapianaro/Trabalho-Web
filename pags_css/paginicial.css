@@ -7,12 +7,12 @@ body {
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
-    background-color: rgba(118, 232, 98, 0.955);
+    background-color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-inicio {
-    background-color: gray;
+    background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,14 +20,13 @@ body {
     width: 100%;
     top: 0;
     height: 60px;
-    /* box-shadow: 10px 10px 15px red;  A VALIDAR */
 }
+    /* box-shadow: 10px 10px 15px red; */
 
 .header-navegacao {
     width: 12%;
     display: flex; 
     justify-content: space-around;
-    color: rgba(255, 255, 255, 0.805);
 }
 
 .ifpr_pinhais{
@@ -39,7 +38,7 @@ body {
 }
 
 .footer{
-    background-color: gray;
+    background-color: #333;
     display: flex; 
     justify-content: space-between;
     align-items: center;
