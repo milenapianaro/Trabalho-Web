@@ -4,13 +4,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body { 
-    display: flex; 
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #00b050;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -35,34 +28,6 @@ header {
     margin-left: 10px;
     justify-content: space-around;
 }
-
-/*-------------------- Corpo ----------------------*/
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
-
-    width: 90%;
-    align-self: center;
-    background-color: white;
-
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.banner-manual {
-    background-color: red;
-    width: 100%;
-    height: 150px;
-}
-
-section {
-    padding: 15px;
-}
-
-/*-------------------- Footer ----------------------*/
 
 footer {
     background-color: gray;
@@ -96,4 +61,28 @@ footer {
 .footer .institucional {
     order: 3;
     margin-right: 20px;
+}
+
+/*-------------------- Corpo ----------------------*/
+
+body { 
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    max-width: 1920px;
+
+    align-self: center;
+    background-color: white;
+}
+
+section {
+    margin: 30px;
 }
