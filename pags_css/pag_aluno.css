@@ -12,7 +12,7 @@ header {
     height: 60px;
     position: sticky;
     top: 0;
-    background-color: gray;
+    background-color: whitesmoke;
 }
 
 .header-navegacao {
@@ -30,7 +30,7 @@ header {
 }
 
 .footer{
-    background-color: gray;
+    background-color: #333;
     display: flex; 
     justify-content: space-between;
     align-items: center;

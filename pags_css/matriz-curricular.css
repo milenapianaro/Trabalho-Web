@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: gray;
+    background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +39,7 @@ header {
 }
 
 .footer{
-    background-color: gray;
+    background-color: #333;
     display: flex; 
     justify-content: space-between;
     align-items: center;
