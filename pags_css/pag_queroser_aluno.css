@@ -8,98 +8,88 @@ body {
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
-    background-color: lightgray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    position: sticky;
-    top: 0;
-    background-color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.header-navegacao {
-    width: 40%;
-    display: flex; 
-    justify-content: space-around;
-}
-
-.ifpr_pinhais{
-    display: flex;
-    max-width: 58%;
-    flex-wrap: wrap;
-    margin-left: 10px;
-    justify-content: space-around;
-}
-
-.footer {
-    background-color: #333;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.footer .item {
-    display: flex; 
-    align-items: center;
-    max-width: 100px;
-}
-
-.footer .item img {
-    max-width: 20px;
-    height: auto;
-    margin-right: 8px;
-}
-
-.footer .instagram {
-    order: 1;
-    color: rgba(255, 255, 255, 0.805);
-}
-
-.footer .facebook {
-    order: 2;
-    color: rgba(255, 255, 255, 0.805);
-}
-
-.footer .institucional {
-    order: 3;
-    margin-right: 20px;
-    color: rgba(255, 255, 255, 0.805);
-}
-
-
-/*--------------------------------------------------------------------*/
-
-.main-quero-ser {
+main {
     display: flex; 
     flex-direction: column; 
-    align-items: center; 
-    align-self: center;
-    background-color: whitesmoke;
+    align-items: center;
+    overflow-y: hidden;
+    background-color: white;
     width: 100%;
-    text-align: center;
 }
 
-.opcoes {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+figure {
+    background-image: url('../Imagens/Quero Ser Aluno/teste.png');
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+#titulo {
+    margin-top: 80px;
+    margin-left: 40px;
 }
 
 #descricao-do-curso { 
-    background-color: #b80e33;
-    width: 100%; 
-    padding: 5px; 
-    font-size: 25px;
-    border: 2px solid black;
+    background-color: rgb(243, 243, 243);
+    padding: 30px;
 } 
+
+.processo-seletivo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: white;
+}
+
+.video {
+    width: 45%;
+}
+
+.processo-texto {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#processo-botao {
+    background-color: rgb(139, 0, 23);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.144);
+    border-radius: 20px;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    width: 110px;
+    text-align: center;
+    align-self: center;
+}
+
+#processo-botao:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.452);
+}
+
+.transferencia {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(230, 230, 230);
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.transferencia-texto {
+    width: 70%;
+}
+
+.transferencia-imagem {
+    width: 25%;
+}
+
+.transferencia-imagem img {
+    width: 100%;
+}
 
 .texto-descricao{
     padding: 15px;
@@ -109,51 +99,8 @@ header {
     text-justify: auto;
 }
 
-/*--------------------------------------------------------------------*/
-
-.como-entrar { 
-    background-color: rgb(3, 119, 55);
-    width: 100%; 
-    padding: 5px;
-    font-size: 20px;
-} 
-
-/*--------------------------------------------------------------------*/
-
-#processo-seletivo {  
-    padding-top: 30px;
-    width: 45%;
-} 
-
-.texto-processo{ 
-    padding-top: 15px;
-    padding: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 17px;
-    text-align: justify;
-} 
-
-/*--------------------------------------------------------------------*/
-
-#transferencia { 
-    padding-top: 30px;
-    width: 45%;
-}
-
-.texto-transferencia{
-    padding-top: 15px;
-    padding: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 17px;
-    text-align: justify;
-}
-
-.video {
-    margin-top: 20px;
-    text-align: center;
+#faixa {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(0, 134, 40);
 }
