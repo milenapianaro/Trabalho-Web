@@ -20,12 +20,20 @@ body {
 }
 
 
-.main-inicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
+.main-inicio {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    overflow-x: hidden;  
+    position: relative; /* Necessário para o posicionamento do pseudo-elemento */  
+    background-image: url("../Imagens/Página Inicial/foto 2.jpg");  
+    background-size: cover;
+    background-repeat: no-repeat;  
+}  
+
+.sobreposicao {
+    background-color: rgba(195, 197, 195, 0.5); /* Cor cinza com 50% de opacidade */  
 }
 
 #faixa-vermelha {
@@ -50,57 +58,66 @@ body {
     max-width: 100%;
 }
 
+.banner-inicio {   
+    width: 100%;  
+    text-align: right; /* Para alinhar o texto à direita */  
+    margin-bottom: 2rem;  
+    padding: 2rem;  
+    font-size: 20px;  
+    font-style: italic;  
+    display: flex;  
+    flex-direction: column; /* Alinha os itens em coluna */  
+    align-items: center; /* Alinha os itens à direita */  
+}  
 
-.banner-inicio { 
-    width: 100%;
-    background-color: rgb(0, 176, 80);
-    text-align: center;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    font-size: 20px;
+#banner-logo {  
+    width: 20%; /* O tamanho do logo pode ser ajustado */  
+    height: auto; /* Mantém a proporção */  
+    margin-bottom: 1rem; /* Espaço entre o logo e o texto */  
+}  
+
+.banner-inicio h1, .banner-inicio p {  
     color: white;
-    font-style: italic;
-}
+    margin: 0; /* Remove margens do h1 e p */ 
+    background: #333; 
+}  
 
-.banner-inicio p{
-    margin: 0 auto;
-    max-width: 80%;
-}
-
-.banner-inicio>#banner-logo {
-    justify-content: center;
-    width: 20%;
-    height: 20%;
-}
-
-.caixas-inicio { 
-    display: flex; 
-    justify-content: space-between;
-    width: 80%;
-    margin-bottom: 20px;
-}
-
-.caixas-inicio a {
-    background-color: rgb(0, 176, 80);
-    text-decoration: none; 
+.caixas-inicio {  
+    border-radius: 20px;  
+    display: flex;  
+    align-items: center; /* Centraliza verticalmente */  
+    justify-content: center; /* Centraliza horizontalmente */  
+    width: 50%; /* A largura desta div é 80% do container pai */  
+    margin: 0 auto 20px; /* Centraliza a div em relação ao pai e adiciona uma margem inferior */  
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha abaixo se não houver espaço */  
+    align-content: center;
     text-align: center;
-    margin: 0 8rem;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    padding-bottom: 1rem;
-    color: white;
-    font-style: italic;
-    font-size: 35px;
-}
+}  
 
-.caixas-inicio a figure { 
-    max-width: 100%; 
-    height: auto; 
-    margin-bottom: 1rem;
-    background-color: #ce181e;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.caixas-inicio a {  
+    border-radius: 20px;  
+    background-color: #333;  
+    text-decoration: none;   
+    text-align: center;  
+    margin: 0 1rem; /* Margem lateral para espaçamento entre as caixas */  
+    display: flex;   
+    flex-direction: column;   
+    align-items: center;  
+    justify-content: center; /* Centraliza verticalmente */  
+    color: white;  
+    font-style: italic;  
+    font-size: 35px;  
+    flex: 1; /* Faz com que as caixas cresçam igualmente */  
+    height: 340px; /* Defina uma altura fixa ou ajustável conforme necessário */  
+}  
+
+.caixas-inicio a figure {   
+    border-radius: 10px;  
+    max-width: 100%;   
+    height: auto;   
+    background-color: black;  
+    padding: 5px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
