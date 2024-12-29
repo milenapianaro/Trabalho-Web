@@ -5,7 +5,7 @@
 
 body { 
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column;
     min-height: 100vh;
     background-color: #00b050;
     font-family: Arial, Helvetica, sans-serif;
@@ -17,50 +17,94 @@ main {
     align-items: center;
     overflow-x: hidden;
 
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1920px;
     align-self: center;
     background-color: white;
 }
 
 .banner {
-    background-color: red;
+    background-color: #009e47;
+    background-image: url("../Imagens/Sou Aluno/faxinha.png");
+    background-size: 100%;
+    background-position: 20px;
     width: 100%;
     height: 150px;
 }
 
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+h1 {
+    margin-top: 4%;
+    margin-left: 30px;
+    color: white;
 }
 
-h1 {
-    text-align: center;
+section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.descricao {
+    text-align: justify;
+    background-color: #f7f7f7;
 }
 
 .imagem-matriz {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 .imagem-matriz img {
-    max-width: 90%;
+    width: 1000px;
+    max-width: 80%;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.links a {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; 
+    min-width: 200px; /* Define uma largura mínima */
+    height: 60px;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.178);
+    border: solid 2px rgb(207, 207, 207);
+    background-color: white;  
+    text-decoration: none;
+    color: black;   
+}
+
+.links a:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.315);
+    background-color: #9e0000;
+    color: white;
 }
 
 .grade {
     width: 90%;
     margin-bottom: 20px;
+    padding: 0px;
 }
 
 .seta { 
     width: 15px;
     height: 10px;
+    padding-right: 10px;
     align-self: center;
     margin-right: 3px;
-    filter: brightness(0%);
+    filter: brightness(0%); /* Muda a cor da seta para preto */
 }
 
 .semestre-titulo {
@@ -126,5 +170,50 @@ h1 {
     padding: 20px;
 }
 
+.atividades-complementares {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    background-color: #f7f7f7;
+}
 
+.atividades-documento {
+    align-self: center;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center;
+    text-align: center;
+    width: 200px; /* Define uma largura mínima */
+    height: 60px;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.178);
+    border: solid 2px rgb(207, 207, 207);
+    background-color: white;  
+    text-decoration: none;
+    color: black;   
+}
 
+.atividades-documento:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.315);
+    background-color: #9e0000;
+    color: white;
+}
+
+.atividades-protocolo {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #4be08e;
+}
+
+.atividades-protocolo img {
+    align-self: center;
+    width: 50%;
+}
+.estagios ul {
+    margin-left: 30px;
+}
