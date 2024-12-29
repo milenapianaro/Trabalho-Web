@@ -15,6 +15,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: solid #cf001c 2px;
     box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.26);
+    z-index: 1000;
 }
 
 .header-navegacao {
