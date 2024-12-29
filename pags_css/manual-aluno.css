@@ -133,6 +133,15 @@ th, td {
     filter: brightness(0%); /* Muda a cor da seta para preto */
 }
 
+.assistencia-itens:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.assistencia-itens:hover .seta {
+    filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg); /*Muda a cor da seta*/
+}
+
 .assistencia-descricao {
     width: 100%;
     display: none;
