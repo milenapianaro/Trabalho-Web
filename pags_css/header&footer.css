@@ -1,3 +1,8 @@
+*{
+    text-decoration: none;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +21,16 @@ header {
     width: 40%;
     display: flex; 
     justify-content: space-around;
+}
+
+.header-navegacao a {
+    color: black; /* Define a cor do texto como preta */
+    font-weight: bold; /* (Opcional) Deixa o texto em negrito */
+}
+
+.header-navegacao a:hover {
+    color: rgb(0, 176, 80); /* (Opcional) Muda a cor ao passar o mouse */
+    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
 }
 
 .ifpr_pinhais{

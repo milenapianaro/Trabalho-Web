@@ -17,7 +17,6 @@ main {
     align-items: center;
     overflow-x: hidden;
     max-width: 1920px;
-
     align-self: center;
     background-color: white;
 }
