@@ -16,7 +16,6 @@ main {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-
     width: 100%;
     max-width: 1920px;
     align-self: center;
@@ -26,7 +25,7 @@ main {
 .banner {
     background-color: #009e47;
     background-image: url("../Imagens/Sou Aluno/faxinha.png");
-    background-size: 100%;
+    background-size: cover;
     background-position: 20px;
     width: 100%;
     height: 150px;

@@ -93,3 +93,18 @@ header {
     margin-right: 20px;
     color: rgba(255, 255, 255, 0.805);
 }
+
+.footer .instagram:hover {
+    color:  #cd191e;    /* (Opcional) Muda a cor ao passar o mouse */
+    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+}
+
+.footer .facebook:hover {
+    color: #cd191e; /* (Opcional) Muda a cor ao passar o mouse */
+    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+}
+
+.footer .institucional:hover {
+    color: #cd191e; /* (Opcional) Muda a cor ao passar o mouse */
+    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+}
