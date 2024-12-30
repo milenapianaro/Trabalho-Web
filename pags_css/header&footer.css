@@ -25,13 +25,29 @@ header {
 }
 
 .header-navegacao a {
+    display: flex;
+    flex-direction: row;
     color: black; /* Define a cor do texto como preta */
     font-weight: bold; /* (Opcional) Deixa o texto em negrito */
+    align-items: center;
 }
 
 .header-navegacao a:hover {
     color: rgb(0, 176, 80); /* (Opcional) Muda a cor ao passar o mouse */
     text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+}
+
+.seta { 
+    width: 12px;
+    height: 7px;
+    align-self: center;
+    margin-right: 3px;
+    padding-right: 3px;
+    filter: brightness(0%); /* Muda a cor da seta para preto */
+}
+
+.header-navegacao:hover .seta {
+    filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg); /*Muda a cor da seta*/
 }
 
 .ifpr_pinhais{

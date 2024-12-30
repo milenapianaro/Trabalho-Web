@@ -11,54 +11,38 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.queroSerAluno{
+main {
     display: flex;
-    max-width: 5%;
-    flex-wrap: wrap;
-    margin-left: 1px;
-    justify-content: space-around;
-}
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 
+    width: 100%;
+    max-width: 1920px;
+    align-self: center;
+    background-color: white;
+}
 
 .main-inicio {  
     display: flex;  
     flex-direction: column;  
     align-items: center;  
     justify-content: center;  
-    overflow-x: hidden;  
-    position: relative; /* Necessário para o posicionamento do pseudo-elemento */  
-    background-image: url("../Imagens/Página Inicial/foto 2.jpg");  
+    overflow-x: hidden;    
+    background-image: url("../Imagens/Página Inicial/banner.jpg");  
     background-size: cover;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
+    width: 100%;
 }  
 
 .sobreposicao {
+    width: 100%;
+    height: 100%;
     background-color: rgba(195, 197, 195, 0.5); /* Cor cinza com 50% de opacidade */  
 }
 
-#faixa-vermelha {
-    padding: 3px;
-    background-color: #ce181e;
-    width: 100%;
-}
-
-#faixa-vermelha-bottom {
-    padding: 3px;
-    background-color: #ce181e;
-    width: 100%;
-    margin-top: -38px;
-    margin-bottom: 50px;
-}
-
-.queroSerAluno{
-    max-width: 100%;
-}
-
-.souAluno{
-    max-width: 100%;
-}
-
 .banner-inicio {   
+    box-sizing: border-box;
     width: 100%;  
     text-align: right; /* Para alinhar o texto à direita */  
     margin-bottom: 2rem;  
@@ -74,7 +58,7 @@ body {
     width: 20%; /* O tamanho do logo pode ser ajustado */  
     height: auto; /* Mantém a proporção */  
     margin-bottom: 1rem; /* Espaço entre o logo e o texto */  
-}  
+} 
 
 .banner-inicio h1, .banner-inicio p {  
     color: white;
@@ -121,3 +105,26 @@ body {
     justify-content: center;  
     align-items: center;  
 }  
+
+.queroSerAluno{
+    display: flex;
+    max-width: 5%;
+    flex-wrap: wrap;
+    margin-left: 1px;
+    justify-content: space-around;
+}
+
+.queroSerAluno{
+    max-width: 100%;
+}
+
+.souAluno{
+    max-width: 100%;
+}
+
+
+
+ 
+
+
+
