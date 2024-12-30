@@ -29,22 +29,24 @@ main {
     align-items: center;  
     justify-content: center;  
     overflow-x: hidden;    
-    background-image: url("../Imagens/Página Inicial/banner.jpg");  
+    background-image: url("../Imagens/Página Inicial/banner.png");  
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
 }  
 
+/*
 .sobreposicao {
     width: 100%;
     height: 100%;
-    background-color: rgba(195, 197, 195, 0.5); /* Cor cinza com 50% de opacidade */  
+    background-color: rgba(195, 197, 195, 0.5);
 }
+*/
 
 .banner-inicio {   
     box-sizing: border-box;
     width: 100%;  
-    text-align: right; /* Para alinhar o texto à direita */  
+    text-align: center; /* Para alinhar o texto à direita */  
     margin-bottom: 2rem;  
     padding: 2rem;  
     font-size: 20px;  
@@ -95,12 +97,12 @@ main {
     height: 340px; /* Defina uma altura fixa ou ajustável conforme necessário */  
 }  
 
-.caixas-inicio a figure {   
-    border-radius: 10px;  
-    max-width: 100%;   
+.caixas-inicio figure {   
+    border-radius: 50px;  
+    width: 15%;   
     height: auto;   
-    background-color: black;  
-    padding: 5px;  
+    background-color: rgb(255, 255, 255);  
+    padding: 20px;  
     display: flex;  
     justify-content: center;  
     align-items: center;  
