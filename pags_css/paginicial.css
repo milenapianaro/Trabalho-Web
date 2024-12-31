@@ -25,36 +25,35 @@ main {
 
 .main-inicio {  
     display: flex;  
-    flex-direction: column;  
+    flex-direction: column; 
+    width: 100%;
+    box-sizing: border-box; 
     align-items: center;  
-    justify-content: center;  
-    overflow-x: hidden;    
+    justify-content: center; 
     background-image: url("../Imagens/Página Inicial/banner.png");  
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
 }
 
-.banner-inicio {   
+#banner-logo {  
+    width: 20%;
+    height: auto;  
+    margin-bottom: 1rem;
+} 
+
+.banner-texto {   
     box-sizing: border-box;
     width: 100%;  
     text-align: center; /* Para alinhar o texto à direita */  
     margin-bottom: 2rem;  
     padding: 2rem;  
-    font-size: 20px;  
-    font-style: italic;  
+    font-size: 20px;
     display: flex;  
     flex-direction: column; /* Alinha os itens em coluna */  
     align-items: center; /* Alinha os itens à direita */  
 }  
 
-#banner-logo {  
-    width: 20%; /* O tamanho do logo pode ser ajustado */  
-    height: auto; /* Mantém a proporção */  
-    margin-bottom: 1rem; /* Espaço entre o logo e o texto */  
-} 
-
-.banner-inicio h1, .banner-inicio p {  
+.banner-texto h1, .banner-texto p {  
     color:green;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.5);
@@ -65,62 +64,66 @@ main {
 }  
 
 .caixas-inicio {  
-    border-radius: 20px;  
-    display: flex;  
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center; /* Centraliza verticalmente */  
     justify-content: center; /* Centraliza horizontalmente */  
-    width: 50%; /* A largura desta div é 80% do container pai */  
-    margin: 0 auto 20px; /* Centraliza a div em relação ao pai e adiciona uma margem inferior */  
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha abaixo se não houver espaço */  
-    align-content: center;
-    text-align: center;
+    width: 50%;
+    margin: 20px 0px 20px 0px;
 }  
 
-.caixas-inicio a {  
-    border-radius: 20px;  
-    background-color: #333;  
-    text-decoration: none;   
-    text-align: center;  
-    margin: 0 1rem; /* Margem lateral para espaçamento entre as caixas */  
-    display: flex;   
-    flex-direction: column;   
-    align-items: center;  
-    justify-content: center; /* Centraliza verticalmente */  
-    color: white;  
-    font-style: italic;  
-    font-size: 35px;  
-    flex: 1; /* Faz com que as caixas cresçam igualmente */  
-    height: 340px; /* Defina uma altura fixa ou ajustável conforme necessário */  
-}  
-
-.caixas-inicio figure {   
-    border-radius: 50px;  
-    width: 15%;   
-    height: auto;   
-    background-color: rgb(255, 255, 255);  
-    padding: 20px;  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-}  
-
-.queroSerAluno{
+.caixa {
+    width: 50%;
     display: flex;
-    max-width: 5%;
-    flex-wrap: wrap;
-    margin-left: 1px;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-items: center;
 }
 
-.queroSerAluno{
-    max-width: 100%;
+.icones {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    width: 20%;
+    background-color: #182022;
+    box-shadow: 0px 0px 10px 0px rgb(34, 34, 34);
 }
 
-.souAluno{
-    max-width: 100%;
+.icones img {
+    box-sizing: border-box;   
+    border-radius: 50px;
+    width: 98%;
+    height: 100%;
+    padding: 10px;
+}  
+
+.icones:hover img {
+    filter: brightness(40%) sepia(50%) saturate(1000%) hue-rotate(90deg);
 }
 
+.icones:hover + .botoes { 
+    color: #1b8a3c; }
 
+.botoes { 
+    background-color: #182022;
+    box-shadow: 0px 0px 10px 0px rgb(15, 15, 15);
+    text-decoration: none;  
+    border-radius: 50px;
+    text-align: center; 
+    margin: 5px 15% 0px 15%;
+    padding: 1rem 0 1rem 0;
+    font-size: 25px;
+    color: white; 
+}  
+
+.botoes:hover {
+    color: #1b8a3c;
+}
+
+.img-hover { 
+    filter: brightness(40%) sepia(50%) saturate(1000%) hue-rotate(90deg); 
+}
 
  
 
