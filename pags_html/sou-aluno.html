@@ -4,25 +4,33 @@
         <meta charset="utf-8">
         <title>Rota IFPR – Sou Aluno</title>
         <link rel="stylesheet" href="../pags_css/header&footer.css">
-        <link rel="stylesheet" href="../pags_css/pag_aluno.css">
+        <link rel="stylesheet" href="../pags_css/sou-aluno.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
         <header>
-            <div class="header-logo">
-                <a href="../pags_html\página principal.html">
-                    <img src="../Imagens/Página Inicial/IFPR_PINHAIS.png"  alt="Instituto Federal" class="ifpr_pinhais"> 
+            <div class="header">
+                <a class="header-logo" href="../pags_html/pagina-inicial.html">
+                    <img class="ifpr-logo" src="../Imagens/Página Inicial/ifpr-logo.png"  alt="Instituto Federal"> 
                 </a>
+                <nav class="header-navegacao">
+                    <a id="nav-aluno" href="../pags_html/sou-aluno.html">
+                        <img src="../Imagens/Matriz Curricular/seta.png" class="seta">
+                        Sou Aluno
+                    </a>
+                    <a href="../pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>
+                    <a href="../pags_html/form-contato.html">Contato</a>
+                </nav>
             </div>
-            <nav class="header-navegacao">
-                <a href="../pags_html\pagina aluno.html">
-                    <img src="../Imagens/Matriz Curricular/seta.png" class="seta">
-                    Sou Aluno
-                </a>
-                <a href="../pags_html\página quero ser.html">Quero Ser Aluno</a>
-                <a href="#">Contato</a>
-            </nav>
+            <div class="menu-oculto">
+                <nav class="menu-nav">
+                    <a href="../pags_html/manual-aluno.html" target="_self">Manual do Aluno</a>
+                    <a href="../pags_html/plataformas.html" target="_self">Plataformas e Recursos</a>
+                    <a href="../pags_html/matriz-curricular.html" target="_self">Matriz Curricular</a>
+                    <a href="../pags_html/atendimento.html" target="_self">E-mails e Atendimento</a>
+                </nav>
+            </div>
         </header>
 
         <figure class="banner">
@@ -70,19 +78,19 @@
                     <h3>Matriz Curricular</h3> 
                     <p>Conheça o curso de Gestão da Tecnologia da Informação, explore as disciplinas, planeje suas horas complementares e aprenda mais sobre estágios. Organize seu semestre de forma eficiente.</p>
                 </a> 
-                <a class="bloco" href="contatos.html" target="_self">
-                    <img class= "icone" src="../Imagens/Sou Aluno/contatos.png">
-                    <h3>Contatos</h3>
+                <a class="bloco" href="../pags_html/atendimento.html" target="_self">
+                    <img class= "icone" src="../Imagens/Sou Aluno/atendimento.png">
+                    <h3>E-mails e Atendimento</h3>
                     <p>Entre em contato com professores, coordenação e outros setores da instituição através dos emails disponíveis. Conecte-se e esclareça suas dúvidas de maneira rápida.</p>
                 </a>
             </section>
             </section>
         </main>
     </body>
-
     <footer class="footer"> 
         <a href="https://www.instagram.com/ifprpinhaisoficial/" target="_blank"><div class="item instagram"><img src="../Imagens/Página Inicial/INSTAGRAM.png" alt="Instagram">Instagram</div></a>
         <a href="https://www.facebook.com/IFPRCampusPinhais" target="_blank"><div class="item facebook"><img src="../Imagens/Página Inicial/FACEBOOK.png" alt="Facebook">Facebook</div></a>         
         <a href="https://ifpr.edu.br/pinhais/" target="_blank"><div class="item institucional"><img src="../Imagens/Página Inicial/IFPR_LOGO.png" alt="Institucional">Site Institucional</div></a>         
     </footer>
+    <script src="../pags_js/header.js"></script>
 </html>

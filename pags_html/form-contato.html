@@ -6,61 +6,69 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="../pags_css/header&footer.css">
         <link rel="stylesheet" href="../pags_css/form-contato.css">
-        <title>Formulário - Contato</title>
+        <title>Rota IFPR - Contato</title>
     </head>
     <body>
         <header>
-            <div class="header-logo">
-                <a href="../pags_html\página principal.html">
-                    <img src="../Imagens/Página Inicial/IFPR_PINHAIS.png"  alt="Instituto Federal" class="ifpr_pinhais"> 
+            <div class="header">
+                <a class="header-logo" href="../pags_html/pagina-inicial.html">
+                    <img class="ifpr-logo" src="../Imagens/Página Inicial/ifpr-logo.png"  alt="Instituto Federal"> 
                 </a>
+                <nav class="header-navegacao">
+                    <a id="nav-aluno" href="../pags_html/sou-aluno.html">
+                        <img src="../Imagens/Matriz Curricular/seta.png" class="seta">
+                        Sou Aluno
+                    </a>
+                    <a href="../pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>
+                    <a href="../pags_html/form-contato.html">Contato</a>
+                </nav>
             </div>
-            <nav class="header-navegacao">
-                <a href="../pags_html\pagina aluno.html">
-                    <img src="../Imagens/Matriz Curricular/seta.png" class="seta">
-                    Sou Aluno
-                </a>
-                <a href="../pags_html\página quero ser.html">Quero Ser Aluno</a>
-                <a href="#">Contato</a>
-            </nav>
+            <div class="menu-oculto">
+                <nav class="menu-nav">
+                    <a href="../pags_html/manual-aluno.html" target="_self">Manual do Aluno</a>
+                    <a href="../pags_html/plataformas.html" target="_self">Plataformas e Recursos</a>
+                    <a href="../pags_html/matriz-curricular.html" target="_self">Matriz Curricular</a>
+                    <a href="../pags_html/atendimento.html" target="_self">E-mails e Atendimento</a>
+                </nav>
+            </div>
         </header>
         
         <figure class="banner">
             <h1>Entre em Contato Conosco</h1>
         </figure>
         <main>
-        <p1>Envie sua duvida ou sugestão para nós. Assim que possível o ROTA 
-            entrará em contato com você.</p1>
-        <form id="contactForm">
-            <div class="form-contato">
-            <p>Nome*:</p>
-            <label for="nomecompl"></label>
-            <input type="text" class="controle_form" id="nomecompl" placeholder="Insira o seu nome completo" required>
-            </div>
-            <div class="form-contato">
-            <p>E-mail*:</p>
-            <label for="email"></label>
-            <input type="email" class="controle_form" id="email" placeholder="Insira o seu e-mail" required>
-            </div>
-            <div class="form-contato">
-            <p>Telefone / Whatsapp:</p>
-            <label for="telefone"></label>
-            <input type="tel" class="controle_form" id="telefone" placeholder="Insira o seu número">
-            </div>
-            <div class="form-contato">
-            <p>Mensagem*:</p>
-            <label for="msg"></label>
-            <textarea class="campo_msg" id="Mensagem" placeholder="Insira sua mensagem" required></textarea>
-            </div>
-            <div class="obrcamp">* Campos obrigatórios.</div>
-            <br><button type="submit" class="botao">Enviar</button></br>
-        </form>
-    </main>
+            <p1>Envie sua duvida ou sugestão para nós. Assim que possível o ROTA 
+                entrará em contato com você.</p1>
+            <form id="contactForm">
+                <div class="form-contato">
+                <p>Nome*:</p>
+                <label for="nomecompl"></label>
+                <input type="text" class="controle_form" id="nomecompl" placeholder="Insira o seu nome completo" required>
+                </div>
+                <div class="form-contato">
+                <p>E-mail*:</p>
+                <label for="email"></label>
+                <input type="email" class="controle_form" id="email" placeholder="Insira o seu e-mail" required>
+                </div>
+                <div class="form-contato">
+                <p>Telefone / Whatsapp:</p>
+                <label for="telefone"></label>
+                <input type="tel" class="controle_form" id="telefone" placeholder="Insira o seu número">
+                </div>
+                <div class="form-contato">
+                <p>Mensagem*:</p>
+                <label for="msg"></label>
+                <textarea class="campo_msg" id="Mensagem" placeholder="Insira sua mensagem" required></textarea>
+                </div>
+                <div class="obrcamp">* Campos obrigatórios.</div>
+                <br><button type="submit" class="botao">Enviar</button></br>
+            </form>
+        </main>
+    </body>
     <footer class="footer"> 
         <a href="https://www.instagram.com/ifprpinhaisoficial/" target="_blank"><div class="item instagram"><img src="../Imagens/Página Inicial/INSTAGRAM.png" alt="Instagram">Instagram</div></a>
         <a href="https://www.facebook.com/IFPRCampusPinhais" target="_blank"><div class="item facebook"><img src="../Imagens/Página Inicial/FACEBOOK.png" alt="Facebook">Facebook</div></a>         
         <a href="https://ifpr.edu.br/pinhais/" target="_blank"><div class="item institucional"><img src="../Imagens/Página Inicial/IFPR_LOGO.png" alt="Institucional">Site Institucional</div></a>         
     </footer>
-    <script src="../pags_js/formEnviarMsg.js"></script>
-    </body>
+    <script src="../pags_js/header.js"></script>
 </html>
