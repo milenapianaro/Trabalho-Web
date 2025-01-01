@@ -1,0 +1,88 @@
+body{
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, .banner {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    background-color: #009e47;
+    background-image: url("../Imagens/Sou Aluno/faxinha.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.banner h1 {
+    color: white;
+    margin: 0;
+}
+
+main{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.contato-form {
+    padding: 30px 30px 10px 30px;
+    background-color: #dfdfdf;
+    width: calc(100% - 50px);
+    height: 100%;
+    margin-left: 50px;
+}
+
+.campo_msg{
+    width: 600px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: top;
+    resize: none;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.campo_msg textarea::placeholder{
+    color: #999;
+    text-align: left;
+}
+
+input.controle_form {
+    width: 600px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-contato {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.obrcamp{
+    font-size: small;
+}
+
+.botao{
+    width: 70px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
