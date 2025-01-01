@@ -31,7 +31,6 @@
                 </nav>
             </div>
         </header>
-
         <main>
             <div class="main-inicio">
                 <img id="banner-logo" src="../Imagens/Página Inicial/ROTA_IFPR.png" alt="Rota IFPR">
@@ -58,18 +57,6 @@
                 </section>
             </div>
         </main>
-
-        <script>
-        document.querySelectorAll('.botoes').forEach(button => {
-            button.addEventListener('mouseenter', () => {
-                button.closest('.caixa').querySelector('.icones img').classList.add('img-hover');
-            });
-            button.addEventListener('mouseleave', () => {
-                button.closest('.caixa').querySelector('.icones img').classList.remove('img-hover');
-            });
-        });
-        </script>
-        
     </body>
     <footer class="footer"> 
         <a href="https://www.instagram.com/ifprpinhaisoficial/" target="_blank"><div class="item instagram"><img src="../Imagens/Página Inicial/INSTAGRAM.png" alt="Instagram">Instagram</div></a>
@@ -77,4 +64,5 @@
         <a href="https://ifpr.edu.br/pinhais/" target="_blank"><div class="item institucional"><img src="../Imagens/Página Inicial/IFPR_LOGO.png" alt="Institucional">Site Institucional</div></a>         
     </footer>
     <script src="../pags_js/header.js"></script>
+    <script src="../pags_js/pagina-inicial-botoes.js"></script>
 </html>
