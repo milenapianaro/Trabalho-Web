@@ -42,15 +42,24 @@ header a, .header a, .menu-visivel a {
     z-index: 1000;
 }
 
+.header-logo {
+    height: 90%;
+    width: auto;
+    margin-left: 1rem;
+}
+
 .ifpr-logo {
     display: flex;
-    max-width: 58%;
-    flex-wrap: wrap;
-    margin-left: 10px;
+    height: 100%;
+}
+
+.ifpr-reduzido {
+    display: none;
 }
 
 .header-navegacao {
     width: 40%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -61,6 +70,11 @@ header a, .header a, .menu-visivel a {
     flex-direction: row;
     color: black;
     font-weight: bold;
+    width: 33%;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    justify-content: center;
 }
 
 .header-navegacao a:hover {
@@ -73,9 +87,19 @@ header a, .header a, .menu-visivel a {
     width: 12px;
     height: 7px;
     align-self: center;
-    margin-right: 3px;
-    padding-right: 3px;
     filter: brightness(0%); /* Muda a cor da seta para preto */
+}
+
+.seta-ativada {
+    width: 12px;
+    height: 7px;
+    align-self: center;
+    transform: rotate(180deg);
+    filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg);
+}
+
+#nav-aluno p { /* Distancia a seta do texto */
+    margin-left: 1rem;
 }
 
 #nav-aluno:hover .seta {
@@ -93,7 +117,7 @@ header a, .header a, .menu-visivel a {
     position: absolute;
     top: 60px;
     width: 100%;
-    height: 50px;
+    height: 3.5rem;
     border-bottom: solid #cf001c 2px;
     background-color: whitesmoke;
     box-shadow: 0px 5px 6px 0px #00000042;
@@ -101,7 +125,9 @@ header a, .header a, .menu-visivel a {
 
 .menu-nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 60%;
     margin-right: 20px;
 }
@@ -109,6 +135,9 @@ header a, .header a, .menu-visivel a {
 .menu-nav a {
     color: black;
     font-weight: bold;
+    text-align: center;
+    width: 25%;
+    padding: 0 1rem 0 1rem;
 }
 
 .menu-nav a:hover {
@@ -184,16 +213,15 @@ header a, .header a, .menu-visivel a {
 @media (min-width: 769px) {
     .header-navegacao, .menu-nav {
         width: 50%; /* Mantém largura proporcional */
-        justify-content: space-between; /* Espaça os links uniformemente */
-        gap: 20%; /* Adiciona espaçamento fixo entre os itens */
-        margin-right: 30px;
+        gap: 1%; /* Adiciona espaçamento fixo entre os itens */
     }
 
     .menu-nav {
-    margin-right: 75px;
+        margin-right: 50px;
+        width: 60%;
     }
 
-    .ifpr-logo {
+    .header-logo {
         max-width: 50%; /* Diminui o tamanho do logo */
     }
 
@@ -208,18 +236,39 @@ header a, .header a, .menu-visivel a {
 /* Telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     /* Header */
-    .header-navegacao, .menu-nav {
-        width: 40%; /* Mantém largura proporcional */
-        justify-content: space-between; /* Espaça os links uniformemente */
-        gap: 10%; /* Adiciona espaçamento fixo entre os itens */
-        margin-right: 100px;
+    .header-navegacao {
+        width: 80%; /* Mantém largura proporcional */
+        gap: 2%; /* Adiciona espaçamento fixo entre os itens */
     }
+
+    .menu-nav {
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 2%;
+    }
+
+    .menu-nav a {
+        width: 20%;
+        padding: 0;
+        margin: 0;
+    }
+
     .header-navegacao a, .menu-nav {
-        font-size: 85%; /* Reduz tamanho da fonte para caber melhor */
+        font-size: 70%; /* Reduz tamanho da fonte para caber melhor */
+    }
+
+    .header-logo {
+        min-width: 20%;
+        margin-left: 1rem;
     }
 
     .ifpr-logo {
-        max-width: 40%;
+        display: none;
+    }
+
+    .ifpr-reduzido {
+        display: flex;
+        height: 100%;
     }
 
     /* Footer */
