@@ -167,3 +167,72 @@ header a, .header a, .menu-visivel a {
     color: #cd191e; /* (Opcional) Muda a cor ao passar o mouse */
     text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
 }
+
+/* media query */
+
+/* Telas grandes (1920px e acima) */
+@media (min-width: 1920px) {
+    .header-navegacao {
+        width: 50%; /* Diminui o espaço dos links no header */
+    }
+    .footer .item {
+        max-width: 20%; /* Aumenta o espaço para itens do footer */
+    }
+}
+
+/* Telas médias (768px a 1199px) */
+@media (min-width: 769px) {
+    .header-navegacao, .menu-nav {
+        width: 50%; /* Mantém largura proporcional */
+        justify-content: space-between; /* Espaça os links uniformemente */
+        gap: 20%; /* Adiciona espaçamento fixo entre os itens */
+        margin-right: 30px;
+    }
+
+    .menu-nav {
+    margin-right: 75px;
+    }
+
+    .ifpr-logo {
+        max-width: 50%; /* Diminui o tamanho do logo */
+    }
+
+    .footer .item {
+        max-width: 50%; /* Ajusta os itens do footer */
+    }
+    .footer .item img {
+        max-width: 10%; /* Reduz o tamanho dos ícones */
+    }
+}
+
+/* Telas pequenas (abaixo de 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    .header-navegacao, .menu-nav {
+        width: 40%; /* Mantém largura proporcional */
+        justify-content: space-between; /* Espaça os links uniformemente */
+        gap: 10%; /* Adiciona espaçamento fixo entre os itens */
+        margin-right: 100px;
+    }
+    .header-navegacao a, .menu-nav {
+        font-size: 85%; /* Reduz tamanho da fonte para caber melhor */
+    }
+
+    .ifpr-logo {
+        max-width: 40%;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .item {
+        max-width: 100%;
+        margin: 8px 0;
+        text-align: center;
+    }
+    .footer .item img {
+        max-width: 15px; /* Ajusta ícones no mobile */
+    }
+}

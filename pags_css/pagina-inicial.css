@@ -125,7 +125,53 @@ main {
     filter: brightness(40%) sepia(50%) saturate(1000%) hue-rotate(90deg); 
 }
 
+/* Media Queries */
+
+/* Telas grandes (1920px e acima) */
+@media (min-width: 1920px) {
+    main {
+        max-width: 100%; 
+    }
+    .banner-texto {
+        padding: 3rem;
+        font-size: 32px;
+    }
+}
  
+/* Telas médias (768px a 1199px) */
+@media (min-width: 769px) {
+    .banner-texto {
+        padding: 3rem;
+        font-size: 24px;
+    }
+    .caixas-inicio {
+        width: 75%;
+    }
+    .caixa {
+        width: 50%;
+    }
+}
+
+/* Dispositivos móveis (abaixo de 768px) */
+@media (max-width: 768px) {
+    .banner-texto {
+        padding: 3rem;
+        font-size: 18px;
+    }
+    #banner-logo {
+        width: 20%;
+    }
+    .caixas-inicio {
+        width: 60%;
+    }
+    .caixa {
+        width: 50%;
+    }
+    .botoes{
+        font-size: 15px;
+    }
+}
+
 
 
 

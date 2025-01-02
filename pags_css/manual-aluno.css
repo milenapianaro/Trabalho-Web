@@ -49,7 +49,7 @@ section {
     background-color: #f7f7f7;;
 }
 
-.avaliacao {
+.avaliacao, .projetosepesquisa {
     display: flex;
     flex-direction: column;
 }
@@ -190,4 +190,42 @@ th, td {
 .hyperlink:hover {
     color: rgb(0, 176, 80); /* (Opcional) Altera a cor ao passar o mouse */
     text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+}
+
+/* media query */
+
+/* Telas grandes (1920px e acima) */
+@media (min-width: 1920px) {
+    .banner {
+        height: 250px;
+        font-size: 2rem;
+    }
+
+    .descricao, .avaliacao, .faltas, .projetosepesquisa, .assistencia, .aproveitamento {
+        font-size: 1.5rem;
+    }
+}
+
+/* Telas médias (768px a 1199px)*/
+@media (min-width: 769px) {
+    .banner {
+        height: 120px;
+        font-size: 1.3rem;
+    }
+
+    .descricao, .avaliacao, .faltas, .projetosepesquisa, .assistencia, .aproveitamento {
+        font-size: 1.1rem;
+    }
+}
+
+/* Telas pequenas (abaixo de 768px) */
+@media (max-width: 768px) {
+    .banner {
+        height: 80px;
+        font-size: 1.0rem;
+    }
+
+    .descricao, .avaliacao, .faltas, .projetosepesquisa, .assistencia, .aproveitamento {
+        font-size: 0.8rem;
+    }
 }

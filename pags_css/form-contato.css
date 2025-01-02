@@ -2,6 +2,7 @@ body{
     font-family: 'Helvetica', sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 header, .banner {
@@ -77,6 +78,7 @@ input.controle_form {
 }
 
 .obrcamp{
+    color: red;
     font-size: small;
 }
 
@@ -85,4 +87,163 @@ input.controle_form {
     height: 40px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.botao:hover {
+    color: rgb(0, 176, 80); /* (Opcional) Altera a cor ao passar o mouse */
+    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+}
+
+/* media query */
+
+/* Telas grandes (1920px e acima) */
+@media (min-width: 1920px) {
+    .banner {
+        height: 250px;
+    }
+
+    .banner h1 {
+        font-size: 4rem;
+    }
+
+    .form-contato {
+        display: flex; /* Usa flexbox para alinhar os itens */
+        flex-direction: column; /* Coloca o texto e o campo em uma coluna */
+        align-items: center; /* Alinha à esquerda */
+        margin-top: 10px; /* Ajusta margens para evitar sobreposição */
+        margin-bottom: 20px;
+    }
+
+    .form-contato p {
+        margin: 0 0 5px 0; /* Espaço entre o texto e o campo */
+        font-size: 1.5rem; /* Tamanho do texto */
+    }
+
+    input.controle_form,
+    textarea.campo_msg {
+        width: 100%; /* Ocupará toda a largura disponível */
+        max-width: 1200px; /* Define um limite para evitar excessos */
+        padding: 10px;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        box-sizing: border-box; /* Garante que padding não afete o tamanho */
+    }
+
+    textarea.campo_msg {
+        height: 150px; /* Define altura para o textarea */
+    }
+
+    .obrcamp{
+        font-size: 1.2rem;
+    }
+
+    .botao{
+        width: 150px;
+        height: 75px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Telas médias (768px a 1199px)*/
+@media (min-width: 769px) {
+    .banner {
+        height: 120px;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3{
+        font-size: 1.5rem;
+    }
+
+    .form-contato {
+        display: flex; /* Usa flexbox para alinhar os itens */
+        flex-direction: column; /* Coloca o texto e o campo em uma coluna */
+        align-items: center; /* Alinha à esquerda */
+        margin-top: 10px; /* Ajusta margens para evitar sobreposição */
+        margin-bottom: 20px;
+    }
+
+    .form-contato p {
+        margin: 0 0 5px 0; /* Espaço entre o texto e o campo */
+        font-size: 1.2rem; /* Tamanho do texto */
+    }
+
+    input.controle_form,
+    textarea.campo_msg {
+        width: 100%; /* Ocupará toda a largura disponível */
+        max-width: 1200px; /* Define um limite para evitar excessos */
+        padding: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        box-sizing: border-box; /* Garante que padding não afete o tamanho */
+    }
+
+    textarea.campo_msg {
+        height: 150px; /* Define altura para o textarea */
+    }
+
+    .obrcamp{
+        font-size: 1.0rem;
+    }
+
+    .botao{
+        width: 100px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Telas pequenas (abaixo de 768px) */
+@media (max-width: 768px) {
+    .banner {
+        height: 80px;
+    }
+
+    .banner h1 {
+        font-size: 1rem;
+    }
+
+    h2, h3{
+        font-size: 0.8rem;
+    }
+
+    .form-contato {
+        display: flex; /* Usa flexbox para alinhar os itens */
+        flex-direction: column; /* Coloca o texto e o campo em uma coluna */
+        align-items: center; /* Alinha à esquerda */
+        margin-top: 10px; /* Ajusta margens para evitar sobreposição */
+        margin-bottom: 20px;
+    }
+
+    .form-contato p {
+        margin: 0 0 5px 0; /* Espaço entre o texto e o campo */
+        font-size: 0.6rem; /* Tamanho do texto */
+    }
+
+    input.controle_form,
+    textarea.campo_msg {
+        width: 100%; /* Ocupará toda a largura disponível */
+        max-width: 1200px; /* Define um limite para evitar excessos */
+        padding: 10px;
+        font-size: 0.6rem;
+        margin-bottom: 20px;
+        box-sizing: border-box; /* Garante que padding não afete o tamanho */
+    }
+
+    textarea.campo_msg {
+        height: 150px; /* Define altura para o textarea */
+    }
+
+    .obrcamp{
+        font-size: 0.6rem;
+    }
+
+    .botao{
+        width: 100px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
 }

@@ -64,6 +64,7 @@ h2 {
     background: #8b8b8b;
     color: white;
     padding: 20px;         /* Adiciona um pouco de espaçamento interno */
+    font-size: 1.2rem;
 }
 
 .botoes {
@@ -78,8 +79,6 @@ h2 {
 .botoes a {
     display: flex;
     align-items: center; /* Alinha verticalmente */
-    max-width: 150px; /* Define uma largura mínima */
-    height: 60px;
     margin: 10px;
     padding: 10px;
     border-radius: 50px;
@@ -97,8 +96,8 @@ h2 {
 }
 
 .link {
-    min-width: 200px; /* Define uma largura máxima */
-    height: 70px;
+    width: 150px;
+    height: 75px;
     margin: 10px;
     border-radius: 50px;
     background-color: white;
@@ -161,4 +160,95 @@ h2 {
 
 .jornada {
     text-align: center;
+}
+
+/* media query */
+
+/* Telas grandes (1920px e acima) */
+@media (min-width: 1920px) {
+    .banner {
+        font-size: 2rem;
+        height: 500px;
+    }
+
+    .faixinha {
+        font-size: 2rem;
+        height: 400px;
+    }
+
+    #painel{
+        font-size: 2rem;
+    }
+
+    .botoes a {
+        width: 300px;
+        height: 80px;
+    }
+
+    .bloco {
+        width: 40%;
+        min-width: 600px;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+}    
+
+/* Telas médias (768px a 1199px)*/
+@media (min-width: 769px) {
+    .banner {
+        font-size: 1rem;
+        height: 250px;
+    }
+
+    .faixinha {
+        font-size: 1rem;
+        height: 200px;
+    }
+
+    #painel{
+        font-size: 1rem;
+    }
+
+    .botoes a {
+        width: 100px;
+        height: 50px;
+    }
+
+    .bloco {
+        width: 20%;
+        min-width: 400px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+} 
+/* Telas pequenas (abaixo de 768px) */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 0.6rem;
+        height: 200px;
+    }
+
+    .faixinha {
+        font-size: 0.6rem;
+        height: 200px;
+    }
+
+    #painel{
+        font-size: 0.8rem;
+    }
+
+    .botoes a {
+        width: 100px;
+        height: 50px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .bloco {
+        width: 80%;
+        min-width: 400px;
+        padding: 20px;
+        font-size: 1.2rem;
+    }
 }

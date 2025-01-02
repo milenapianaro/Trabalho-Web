@@ -171,8 +171,8 @@ section {
 
 #email-modelo {
     text-align: center;
-    font-size: 20px;
 }
+
 .email-recuperacao {
     background-color: rgb(221, 221, 221);
     padding: 20px;
@@ -314,4 +314,91 @@ section {
     width: 100%;
     height: 70px;
     background-color: rgb(0, 134, 40);
+}
+
+/* media query */
+
+/* Telas grandes (1920px e acima) */
+@media (min-width: 1920px) {
+    .banner {
+        height: 250px;
+        font-size: 2rem;
+    }
+
+    .plataformas-titulo{
+        font-size: 1.5rem;
+    }
+
+    .suap, .ava, .email, .carteira, .bibliotecas {
+        font-size: 1.3rem;
+    }
+
+}
+
+/* Telas médias (768px a 1199px)*/
+@media (min-width: 769px) {
+    .banner {
+        height: 200px;
+        font-size: 1.6rem;
+    }
+
+    .plataformas-titulo{
+        font-size: 1.2rem;
+    }
+
+    .suap, .ava, .email, .carteira, .bibliotecas {
+        font-size: 1.0rem;
+    }
+
+    .suap-texto p {
+        margin-top: 20px;
+    }
+
+    .suap-acesso{
+        margin-top: 100px;
+    }
+
+    .biblioteca-item{
+        width: 200px;
+        height: 120px;
+    }
+
+    .biblioteca-tutorial{
+        width: 90%;
+    }
+
+}
+
+/* Telas pequenas (abaixo de 768px) */
+@media (max-width: 768px) {
+    .banner {
+        height: 100px;
+        font-size: 1.0rem;
+    }
+
+    .plataformas-titulo{
+        font-size: 0.8rem;
+    }
+
+    .suap, .ava, .email, .carteira, .bibliotecas {
+        font-size: 0.8rem;
+    }
+
+    .suap-texto p {
+        margin-top: 20px;
+    }
+
+    .suap-acesso{
+        margin-top: 100px;
+    }
+
+    .biblioteca-item{
+        width: 200px;
+        height: 120px;
+    }
+
+    .biblioteca-tutorial{
+        width: 90%;
+    }
+
 }
