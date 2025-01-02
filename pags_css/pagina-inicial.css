@@ -53,15 +53,19 @@ main {
     align-items: center; /* Alinha os itens à direita */  
 }  
 
-.banner-texto h1, .banner-texto p {  
-    color:green;
+.banner-texto {  
+    color:rgb(206, 255, 186);
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #ccc;
+    background-color: rgba(73, 73, 73, 0.5);
     padding: 10px;
-    border-radius: 5px;
+    width: 90%;
+    border-radius: 500px;
     margin: 0;
-}  
+} 
+
+.banner-texto h1, .banner-texto p {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.945);
+}
 
 .caixas-inicio {  
     display: flex; 
@@ -84,8 +88,8 @@ main {
     align-self: center;
     display: flex;
     justify-content: center;
-    border-radius: 50px;
-    width: 20%;
+    border-radius: 5000px;
+    width: 4rem;
     background-color: #182022;
     box-shadow: 0px 0px 10px 0px rgb(34, 34, 34);
 }
@@ -94,7 +98,6 @@ main {
     box-sizing: border-box;   
     border-radius: 50px;
     width: 98%;
-    height: 100%;
     padding: 10px;
 }  
 
@@ -110,7 +113,9 @@ main {
     box-shadow: 0px 0px 10px 0px rgb(15, 15, 15);
     text-decoration: none;  
     border-radius: 50px;
-    text-align: center; 
+    text-align: center;
+    align-self: center;
+    width: 50%;
     margin: 5px 15% 0px 15%;
     padding: 1rem 0 1rem 0;
     font-size: 25px;
@@ -141,7 +146,7 @@ main {
 /* Telas médias (768px a 1199px) */
 @media (min-width: 769px) {
     .banner-texto {
-        padding: 3rem;
+        padding: 2rem;
         font-size: 24px;
     }
     .caixas-inicio {
