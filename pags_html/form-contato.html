@@ -1,74 +1,97 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../pags_css/header&footer.css">
-        <link rel="stylesheet" href="../pags_css/form-contato.css">
-        <title>Rota IFPR - Contato</title>
-    </head>
-    <body>
-        <header>
-            <div class="header">
-                <a class="header-logo" href="../pags_html/pagina-inicial.html">
-                    <img class="ifpr-logo" src="../Imagens/Página Inicial/ifpr-logo.png"  alt="Instituto Federal"> 
-                </a>
-                <nav class="header-navegacao">
-                    <a id="nav-aluno" href="../pags_html/sou-aluno.html">
-                        <img src="../Imagens/Matriz Curricular/seta.png" class="seta">
-                        Sou Aluno
-                    </a>
-                    <a href="../pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>
-                    <a href="../pags_html/form-contato.html">Contato</a>
-                </nav>
-            </div>
-            <div class="menu-oculto">
-                <nav class="menu-nav">
-                    <a href="../pags_html/manual-aluno.html" target="_self">Manual do Aluno</a>
-                    <a href="../pags_html/plataformas.html" target="_self">Plataformas e Recursos</a>
-                    <a href="../pags_html/matriz-curricular.html" target="_self">Matriz Curricular</a>
-                    <a href="../pags_html/atendimento.html" target="_self">E-mails e Atendimento</a>
-                </nav>
-            </div>
-        </header>
-        
-        <figure class="banner">
-            <h1>Entre em Contato Conosco</h1>
-        </figure>
-        <main>
-            <h2>Envie sua duvida ou sugestão para nós.</h2>
-            <h3>Assim que possível ela será respondida.</h3>
-            <form id="contactForm">
-                <div class="form-contato">
-                <p>Nome*:</p>
-                <label for="nomecompl"></label>
-                <input type="text" class="controle_form" id="nomecompl" placeholder="Insira o seu nome completo" required>
-                </div>
-                <div class="form-contato">
-                <p>E-mail*:</p>
-                <label for="email"></label>
-                <input type="email" class="controle_form" id="email" placeholder="Insira o seu e-mail" required>
-                </div>
-                <div class="form-contato">
-                <p>Telefone / Whatsapp:</p>
-                <label for="telefone"></label>
-                <input type="tel" class="controle_form" id="telefone" placeholder="Insira o seu número">
-                </div>
-                <div class="form-contato">
-                <p>Mensagem*:</p>
-                <label for="msg"></label>
-                <textarea class="campo_msg" id="Mensagem" placeholder="Insira sua mensagem" required></textarea>
-                </div>
-                <div class="obrcamp">* Campos obrigatórios.</div>
-                <br><button type="submit" class="botao">Enviar</button></br>
-            </form>
-        </main>
-    </body>
-    <footer class="footer"> 
-        <a href="https://www.instagram.com/ifprpinhaisoficial/" target="_blank"><div class="item instagram"><img src="../Imagens/Página Inicial/INSTAGRAM.png" alt="Instagram">Instagram</div></a>
-        <a href="https://www.facebook.com/IFPRCampusPinhais" target="_blank"><div class="item facebook"><img src="../Imagens/Página Inicial/FACEBOOK.png" alt="Facebook">Facebook</div></a>         
-        <a href="https://ifpr.edu.br/pinhais/" target="_blank"><div class="item institucional"><img src="../Imagens/Página Inicial/IFPR_LOGO.png" alt="Institucional">Site Institucional</div></a>         
-    </footer>
-    <script src="../pags_js/header.js"></script>
+<!DOCTYPE html>  
+<html lang="pt-br">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="../pags_css/header&footer.css">  
+    <link rel="stylesheet" href="../pags_css/form-contato.css">  
+    <title>Rota IFPR - Contato</title>  
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>  
+    <script type="text/javascript">  
+        // Inicializando o EmailJS  
+        (function () {  
+            emailjs.init("nrIX3MAzLIeHjjVVn"); // Substitua por sua chave pública  
+        })();  
+
+        window.onload = function () {  
+            document.getElementById('contactForm').addEventListener('submit', function (event) {  
+                event.preventDefault();  
+
+                // Enviar o formulário  
+                emailjs.sendForm('Contact_ID', 'template_xer52pr', this) // Substitua pelos seus valores  
+                    .then(() => {  
+                        alert('Mensagem enviada com sucesso!');  
+                        event.target.reset(); // Reseta o formulário  
+                    }, (error) => {  
+                        alert('Falha ao enviar a mensagem: ' + JSON.stringify(error));  
+                    });  
+            });  
+        };  
+    </script>  
+</head>  
+<body>  
+    <header>  
+        <div class="header">  
+            <a class="header-logo" href="../pags_html/pagina-inicial.html">  
+                <img class="ifpr-logo" src="../Imagens/Página Inicial/ifpr-logo.png" alt="Instituto Federal">   
+            </a>  
+            <nav class="header-navegacao">  
+                <a id="nav-aluno" href="../pags_html/sou-aluno.html">  
+                    <img src="../Imagens/Matriz Curricular/seta.png" class="seta"> Sou Aluno  
+                </a>  
+                <a href="../pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>  
+                <a href="../pags_html/form-contato.html">Contato</a>  
+            </nav>  
+        </div>  
+        <div class="menu-oculto">  
+            <nav class="menu-nav">  
+                <a href="../pags_html/manual-aluno.html" target="_self">Manual do Aluno</a>  
+                <a href="../pags_html/plataformas.html" target="_self">Plataformas e Recursos</a>  
+                <a href="../pags_html/matriz-curricular.html" target="_self">Matriz Curricular</a>  
+                <a href="../pags_html/atendimento.html" target="_self">E-mails e Atendimento</a>  
+            </nav>  
+        </div>  
+    </header>  
+
+    <figure class="banner">  
+        <h1>Entre em Contato Conosco</h1>  
+    </figure>  
+    <main>  
+        <h2>Envie sua dúvida ou sugestão para nós.</h2>  
+        <h3>Assim que possível ela será respondida.</h3>  
+        <form id="contactForm">  
+            <div class="form-contato">  
+                <p>Nome*:</p>  
+                <input type="text" class="controle_form" name="user_name" placeholder="Insira o seu nome completo" required>  
+            </div>  
+            <div class="form-contato">  
+                <p>E-mail*:</p>  
+                <input type="email" class="controle_form" name="user_email" placeholder="Insira o seu e-mail" required>  
+            </div>  
+            <div class="form-contato">  
+                <p>Telefone / Whatsapp:</p>  
+                <input type="tel" class="controle_form" name="user_phone" placeholder="Insira o seu número">  
+            </div>  
+            <div class="form-contato">  
+                <p>Mensagem*:</p>  
+                <textarea class="campo_msg" name="message" placeholder="Insira sua mensagem" required></textarea>  
+            </div>  
+            <div class="obrcamp">* Campos obrigatórios.</div>  
+            <br><button type="submit" class="botao">Enviar</button></br>  
+        </form>  
+    </main>  
+    <footer class="footer">   
+        <a href="https://www.instagram.com/ifprpinhaisoficial/" target="_blank">  
+            <div class="item instagram"><img src="../Imagens/Página Inicial/INSTAGRAM.png" alt="Instagram">Instagram</div>  
+        </a>  
+        <a href="https://www.facebook.com/IFPRCampusPinhais" target="_blank">  
+            <div class="item facebook"><img src="../Imagens/Página Inicial/FACEBOOK.png" alt="Facebook">Facebook</div>  
+        </a>         
+        <a href="https://ifpr.edu.br/pinhais/" target="_blank">  
+            <div class="item institucional"><img src="../Imagens/Página Inicial/IFPR_LOGO.png" alt="Institucional">Site Institucional</div>  
+        </a>         
+    </footer>  
+    <script src="../pags_js/header.js"></script>  
+</body>  
 </html>
