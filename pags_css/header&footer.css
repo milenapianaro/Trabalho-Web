@@ -73,8 +73,8 @@ header a, .header a, .menu-visivel a {
     width: 33%;
     height: 100%;
     align-items: center;
-    padding: 0 1rem 0 1rem;
     justify-content: center;
+    text-align: center;
 }
 
 .header-navegacao a:hover {
@@ -86,6 +86,8 @@ header a, .header a, .menu-visivel a {
 .seta { 
     width: 12px;
     height: 7px;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
     align-self: center;
     filter: brightness(0%); /* Muda a cor da seta para preto */
 }
@@ -93,13 +95,11 @@ header a, .header a, .menu-visivel a {
 .seta-ativada {
     width: 12px;
     height: 7px;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
     align-self: center;
     transform: rotate(180deg);
     filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg);
-}
-
-#nav-aluno p { /* Distancia a seta do texto */
-    margin-left: 1rem;
 }
 
 #nav-aluno:hover .seta {
@@ -148,16 +148,15 @@ header a, .header a, .menu-visivel a {
 
 .footer {
     background-color: #333;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
 }
 
 .footer .item {
     display: flex; 
     align-items: center;
-    max-width: 100px;
+    height: 95%;
 }
 
 .footer .item img {
@@ -174,11 +173,11 @@ header a, .header a, .menu-visivel a {
 .footer .facebook {
     order: 2;
     color: rgba(255, 255, 255, 0.805);
+    justify-content: center;
 }
 
 .footer .institucional {
     order: 3;
-    margin-right: 20px;
     color: rgba(255, 255, 255, 0.805);
 }
 
@@ -204,8 +203,13 @@ header a, .header a, .menu-visivel a {
     .header-navegacao {
         width: 50%; /* Diminui o espaço dos links no header */
     }
+
+    .menu-nav {
+        width: 50%;
+    }
+    
     .footer .item {
-        max-width: 20%; /* Aumenta o espaço para itens do footer */
+        max-width: 20%;  
     }
 }
 
@@ -223,13 +227,6 @@ header a, .header a, .menu-visivel a {
 
     .header-logo {
         max-width: 50%; /* Diminui o tamanho do logo */
-    }
-
-    .footer .item {
-        max-width: 50%; /* Ajusta os itens do footer */
-    }
-    .footer .item img {
-        max-width: 10%; /* Reduz o tamanho dos ícones */
     }
 }
 
@@ -254,7 +251,12 @@ header a, .header a, .menu-visivel a {
     }
 
     .header-navegacao a, .menu-nav {
-        font-size: 70%; /* Reduz tamanho da fonte para caber melhor */
+        font-size: 80%; /* Reduz tamanho da fonte para caber melhor */
+    }
+
+    .seta, .seta-ativada { 
+        padding: 0.2rem;
+        margin-right: 10%;
     }
 
     .header-logo {
@@ -283,5 +285,16 @@ header a, .header a, .menu-visivel a {
     }
     .footer .item img {
         max-width: 15px; /* Ajusta ícones no mobile */
+    }
+}
+
+@media (max-width: 330px) {
+    .seta, .seta-ativada { 
+        padding: 0.2rem;
+        margin-right: 0.1rem;
+    }
+
+    .menu-nav {
+        font-size: 60%; /* Reduz tamanho da fonte para caber melhor */
     }
 }
