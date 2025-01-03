@@ -55,7 +55,6 @@ section {
     display: flex; /* Alinha os itens horizontalmente */
     justify-content: center; /* Centraliza os itens no contêiner */
     flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
-    gap: 100px; /* Espaçamento entre os botões */
     margin-top: 10px;
     text-align: center;
 }
@@ -204,17 +203,17 @@ table {
     }
 
     .atendimento, .contatos, .contatos-tecnicos, .contatos-docentes {
-        font-size: 1.1rem;
+        text-align: center;
+        font-size: 0.6rem;
     }
 
     .contatos-tecnicos, .contatos-docentes {
         display: flex;
         justify-content: center;
-        width: 100%;
     }
 
     .botoes a{
-        width: 150px;
+        width: 120px;
         height: 50px;
     }
 }
