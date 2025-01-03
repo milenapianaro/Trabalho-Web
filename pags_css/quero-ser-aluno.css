@@ -125,20 +125,20 @@ iframe {
 /* Telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {
-        height: 800px;
+        height: 600px;
     }
 
     #titulo{
-        font-size: 40px;
+        font-size: 2rem;
     }
 
-    #descricao-do-curso {
-        font-size: 30px;
+    #descricao-do-curso p{
+        font-size: 1.5rem;
     }
 
     .processo-texto {
         width: 80%;
-        font-size: 30px;
+        font-size: 1.5rem;
     }
 
     #processo-botao {
@@ -153,11 +153,12 @@ iframe {
     .transferencia-texto {
         width: 80%;
         text-align: center;
-        font-size: 30px;
+        font-size: 1.5rem;
     }
 
-    .transferencia-imagem {
-        width: 20%;
+    .transferencia-imagem img {
+        width: 60%;
+        margin-left: 100px;
         margin-top: 20px;
     }
 }
@@ -179,13 +180,13 @@ iframe {
 
     iframe {
         margin-left: 100px;
-        width: 600px;
-        height: 300px;
+        width: 400px;
+        height: 200px;
     }
 
     .processo-texto {
-        width: 80%;
-        margin-left: 20px;
+        width: 70%;
+        margin-left: 40px;
     }
 
     .transferencia {
@@ -223,8 +224,8 @@ iframe {
 
     iframe {
         align-items: center;
-        width: 500px;
-        height: 350px;
+        width: 300px;
+        height: 200px;
     }
 
     .processo-seletivo {
@@ -243,14 +244,14 @@ iframe {
 
     .transferencia-imagem {
         display: flex;
-        width: 20%;
+        width: 40%;
         align-items: center;
     }
 
     .hyperlink {
         font-size: 0.9rem;
     }
-
+    
     #processo-botao {
         font-size: 0.9rem;
         padding: 10px;
