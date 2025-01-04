@@ -253,8 +253,11 @@ header a, .header a, .menu-visivel a {
         font-size: 80%; /* Reduz tamanho da fonte para caber melhor */
     }
 
+    #nav-aluno {
+        font-size: 80%;
+    }
+
     .seta, .seta-ativada { 
-        padding: 0.2rem;
         margin-right: 10%;
     }
 
@@ -289,7 +292,6 @@ header a, .header a, .menu-visivel a {
 
 @media (max-width: 330px) {
     .seta, .seta-ativada { 
-        padding: 0.2rem;
         margin-right: 0.1rem;
     }
 
