@@ -3,32 +3,12 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
-    <link rel="stylesheet" href="../pags_css/header&footer.css">  
-    <link rel="stylesheet" href="../pags_css/form-contato.css">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="../pags_css/header&footer.css"> 
+    <link rel="stylesheet" href="../pags_css/form-contato.css">
     <title>Rota IFPR - Contato</title>  
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>  
-    <script type="text/javascript">  
-        // Inicializando o EmailJS  
-        (function () {  
-            emailjs.init("nrIX3MAzLIeHjjVVn"); // Substitua por sua chave pública  
-        })();  
-
-        window.onload = function () {  
-            document.getElementById('contactForm').addEventListener('submit', function (event) {  
-                event.preventDefault();  
-
-                // Enviar o formulário  
-                emailjs.sendForm('Contact_ID', 'template_xer52pr', this) // Substitua pelos seus valores  
-                    .then(() => {  
-                        alert('Mensagem enviada com sucesso!');  
-                        event.target.reset(); // Reseta o formulário  
-                    }, (error) => {  
-                        alert('Falha ao enviar a mensagem: ' + JSON.stringify(error));  
-                    });  
-            });  
-        };  
-    </script>  
+    <script type="text/javascript" src="../pags_js/email.js"></script>  
 </head>  
 <body>  
     <header>
@@ -40,7 +20,7 @@
             <nav class="header-navegacao">
                 <a id="nav-aluno" href="../pags_html/sou-aluno.html">
                     <img class="seta" id="seta-aluno" src="../Imagens/Matriz Curricular/seta.png">
-                    <p>Sou Aluno</p>
+                    Sou Aluno
                 </a>
                 <a href="../pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>
                 <a href="../pags_html/form-contato.html">Contato</a>
