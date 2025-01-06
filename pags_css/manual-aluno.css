@@ -150,7 +150,7 @@ th, td {
     padding-right: 10px;
     align-self: center;
     margin-right: 3px;
-    filter: brightness(0%); /* Muda a cor da seta para preto */
+    filter: brightness(0%);
 }
 
 .assistencia-itens:hover {
@@ -159,7 +159,7 @@ th, td {
 }
 
 .assistencia-itens:hover .seta {
-    filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg); /*Muda a cor da seta*/
+    filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg); 
 }
 
 .assistencia-descricao {
@@ -202,19 +202,19 @@ th, td {
 }
 
 .hyperlink {
-    color: black; /* Define a cor como preta */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* (Opcional) Deixa o texto em negrito */
+    color: black; 
+    text-decoration: none; 
+    font-weight: bold; 
 }
 
 .hyperlink:hover {
-    color: rgb(0, 176, 80); /* (Opcional) Altera a cor ao passar o mouse */
-    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+    color: rgb(0, 176, 80); 
+    text-decoration: underline;
 }
 
 /* media query */
 
-/* Telas grandes (1920px e acima) */
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {
         height: 250px;
@@ -226,7 +226,7 @@ th, td {
     }
 }
 
-/* Telas médias (768px a 1199px)*/
+/* telas médias (768px a 1199px)*/
 @media (min-width: 769px) {
     .banner {
         height: 120px;
@@ -238,7 +238,7 @@ th, td {
     }
 }
 
-/* Telas pequenas (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     .banner {
         height: 80px;

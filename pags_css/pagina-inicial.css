@@ -44,12 +44,12 @@ main {
 
 .banner-texto {   
     box-sizing: border-box;
-    text-align: center; /* Para alinhar o texto à direita */  
+    text-align: center; 
     margin-bottom: 2rem;  
     font-size: 20px;
     display: flex;  
-    flex-direction: column; /* Alinha os itens em coluna */  
-    align-items: center; /* Alinha os itens à direita */
+    flex-direction: column; 
+    align-items: center; 
     color:rgb(206, 255, 186);
     font-weight: bold;
     background-color: rgba(73, 73, 73, 0.5);
@@ -67,8 +67,8 @@ main {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center; /* Centraliza verticalmente */  
-    justify-content: center; /* Centraliza horizontalmente */  
+    align-items: center; 
+    justify-content: center;  
     width: 50%;
     margin: 20px 0px 20px 0px;
 }  
@@ -126,9 +126,9 @@ main {
     filter: brightness(40%) sepia(50%) saturate(1000%) hue-rotate(90deg); 
 }
 
-/* Media Queries */
+/* media Queries */
 
-/* Telas grandes (1920px e acima) */
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     main {
         max-width: 100%; 
@@ -139,7 +139,7 @@ main {
     }
 }
  
-/* Telas médias (768px a 1199px) */
+/* telas médias (768px a 1199px) */
 @media (min-width: 769px) {
     .banner-texto {
         padding: 2rem;
@@ -153,7 +153,7 @@ main {
     }
 }
 
-/* Dispositivos móveis (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     .banner-texto {
         padding: 3rem;

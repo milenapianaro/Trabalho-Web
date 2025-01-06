@@ -179,7 +179,7 @@ h2 {
 
 /* media query */
 
-/* Telas grandes (1920px e acima) */
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {
         font-size: 2rem;
@@ -208,7 +208,7 @@ h2 {
     }
 }    
 
-/* Telas médias (768px a 1199px)*/
+/* telas médias (768px a 1199px)*/
 @media (min-width: 769px) {
     .banner {
         font-size: 1rem;
@@ -237,7 +237,7 @@ h2 {
     }
 
 } 
-/* Telas pequenas (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     .banner {
         font-size: 0.6rem;

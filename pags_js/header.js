@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu-oculto');
 
     const dispositivoMovel = () => {
-        return window.innerWidth <= 768; // Definindo uma largura típica para dispositivos móveis
+        return window.innerWidth <= 768; 
     };
 
-    // Definindo as mudanças de estado
-
-    const mostrarMenu = () => { // Realiza a troca de classe dos menus
+    const mostrarMenu = () => {  //função para exibir menu suspenso do sou aluno em dispositivos médios/grandes
         barra.classList.add('header-expansao');
         barra.classList.remove('header');
         menu.classList.add('menu-visivel');
@@ -19,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         seta.classList.remove('seta');
     };
 
-    const ocultarMenu = () => {
+    const ocultarMenu = () => {  //função para ocultar menu suspenso do sou aluno em dispositivos médios/grandes
         setTimeout(() => {
-            if (!menu.matches(':hover') && !menu.matches(':active')) { // Se o cursor não estiver em cima do menu 
+            if (!menu.matches(':hover') && !menu.matches(':active')) { 
                 menu.classList.add('menu-oculto');
                 menu.classList.remove('menu-visivel');
                 barra.classList.add('header');
@@ -31,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 300);
     };
+
+    //função para ocultar menu suspenso do sou aluno em dispositivos pequenos
 
     const alternarMenu = (event) => {
         if (dispositivoMovel()) {
@@ -42,8 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
-    
-    // Execução dos eventos
 
     botao.addEventListener('mouseenter', mostrarMenu);
     botao.addEventListener('mouseleave', ocultarMenu);

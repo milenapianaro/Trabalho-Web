@@ -35,7 +35,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     padding-left: 20px;
-    min-height: 120px; /* Defina uma altura mínima */ 
+    min-height: 120px; 
     max-height: 120px;
 }
 
@@ -267,7 +267,7 @@ section {
 .biblioteca-blocos {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
+    flex-wrap: wrap; 
 }
 
 .biblioteca-item {
@@ -284,7 +284,7 @@ section {
 }
 
 .biblioteca-item p {
-    margin: 0; /* Remove margens padrão dos parágrafos */
+    margin: 0; 
 }
 
 .biblioteca-links, .biblioteca-links-ext {
@@ -351,7 +351,7 @@ section {
 
 /* media query */
 
-/* Telas grandes (1920px e acima) */
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {
         height: 250px;
@@ -368,7 +368,7 @@ section {
 
 }
 
-/* Telas médias (768px a 1199px)*/
+/* telas médias (768px a 1199px)*/
 @media (min-width: 769px) {
     .banner {
         height: 200px;
@@ -399,7 +399,7 @@ section {
 
 }
 
-/* Telas pequenas (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     .banner {
         height: 100px;

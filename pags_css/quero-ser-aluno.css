@@ -121,17 +121,19 @@ iframe {
 }
 
 .hyperlink {
-    color: black; /* Define a cor como preta */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold; /* (Opcional) Deixa o texto em negrito */
+    color: black; 
+    text-decoration: none; 
+    font-weight: bold;
 }
 
 .hyperlink:hover {
-    color: rgb(0, 176, 80); /* (Opcional) Altera a cor ao passar o mouse */
-    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+    color: rgb(0, 176, 80); 
+    text-decoration: underline; 
 }
 
-/* Telas grandes (1920px e acima) */
+/* media query */
+
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {
         height: 600px;
@@ -171,7 +173,7 @@ iframe {
     }
 }
 
-/* Telas médias (768px a 1199px)  */
+/* telas médias (768px a 1199px)  */
 @media (min-width: 769px) {
     .banner {
         height: 450px;
@@ -213,7 +215,7 @@ iframe {
     }
 }
 
-/*Telas pequenas (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
 
     .banner {

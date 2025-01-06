@@ -66,9 +66,9 @@ section {
 }
 
 .botoes {
-    display: flex; /* Alinha os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens no contêiner */
-    flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
     margin-top: 10px;
     text-align: center;
 }
@@ -139,7 +139,7 @@ table {
 }
 
 .nome, .email { 
-    width: 50%; /* Deixa a tabela meio a meio */
+    width: 50%; 
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -175,7 +175,7 @@ table {
 
 /* media query */
 
-/* Telas grandes (1920px e acima) */
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner{
         height: 250px;
@@ -192,7 +192,7 @@ table {
     }
 }
 
-/* Telas médias (768px a 1199px)*/
+/* telas médias (768px a 1199px)*/
 @media (min-width: 769px) {
     .banner{
         height: 120px;
@@ -209,7 +209,7 @@ table {
     }
 }
 
-/* Telas pequenas (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     .banner{
         height: 120px;

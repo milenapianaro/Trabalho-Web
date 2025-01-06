@@ -89,7 +89,7 @@ header a, .header a, .menu-visivel a {
     height: 7px;
     margin: 0.5rem 1rem 0.5rem 0.5rem;
     align-self: center;
-    filter: brightness(0%); /* Muda a cor da seta para preto */
+    filter: brightness(0%); 
 }
 
 .seta-ativada {
@@ -102,7 +102,7 @@ header a, .header a, .menu-visivel a {
 }
 
 #nav-aluno:hover .seta {
-    filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg); /* Muda a cor da seta para verde */
+    filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg); 
 }
 
 .menu-oculto {
@@ -181,26 +181,26 @@ header a, .header a, .menu-visivel a {
 }
 
 .footer .instagram:hover {
-    color:  #cd191e;    /* (Opcional) Muda a cor ao passar o mouse */
-    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+    color:  #cd191e;    
+    text-decoration: underline; 
 }
 
 .footer .facebook:hover {
-    color: #cd191e; /* (Opcional) Muda a cor ao passar o mouse */
-    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+    color: #cd191e; 
+    text-decoration: underline; 
 }
 
 .footer .institucional:hover {
-    color: #cd191e; /* (Opcional) Muda a cor ao passar o mouse */
-    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+    color: #cd191e; 
+    text-decoration: underline; 
 }
 
 /* media query */
 
-/* Telas grandes (1920px e acima) */
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .header-navegacao {
-        width: 50%; /* Diminui o espaço dos links no header */
+        width: 50%;
     }
 
     .menu-nav {
@@ -212,11 +212,11 @@ header a, .header a, .menu-visivel a {
     }
 }
 
-/* Telas médias (768px a 1199px) */
+/* telas médias (768px a 1199px) */
 @media (min-width: 769px) {
     .header-navegacao, .menu-nav {
-        width: 50%; /* Mantém largura proporcional */
-        gap: 1%; /* Adiciona espaçamento fixo entre os itens */
+        width: 50%; 
+        gap: 1%;
     }
 
     .menu-nav {
@@ -225,16 +225,15 @@ header a, .header a, .menu-visivel a {
     }
 
     .header-logo {
-        max-width: 50%; /* Diminui o tamanho do logo */
+        max-width: 50%; 
     }
 }
 
-/* Telas pequenas (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
-    /* Header */
     .header-navegacao {
-        width: 80%; /* Mantém largura proporcional */
-        gap: 2%; /* Adiciona espaçamento fixo entre os itens */
+        width: 80%; 
+        gap: 2%;
     }
 
     .menu-nav {
@@ -250,7 +249,7 @@ header a, .header a, .menu-visivel a {
     }
 
     .header-navegacao a, .menu-nav {
-        font-size: 80%; /* Reduz tamanho da fonte para caber melhor */
+        font-size: 80%; 
     }
 
     #nav-aluno {
@@ -275,7 +274,6 @@ header a, .header a, .menu-visivel a {
         height: 100%;
     }
 
-    /* Footer */
     .footer {
         flex-direction: column;
         align-items: center;
@@ -286,7 +284,7 @@ header a, .header a, .menu-visivel a {
         text-align: center;
     }
     .footer .item img {
-        max-width: 15px; /* Ajusta ícones no mobile */
+        max-width: 15px; 
     }
 }
 
@@ -296,6 +294,6 @@ header a, .header a, .menu-visivel a {
     }
 
     .menu-nav {
-        font-size: 60%; /* Reduz tamanho da fonte para caber melhor */
+        font-size: 60%;
     }
 }

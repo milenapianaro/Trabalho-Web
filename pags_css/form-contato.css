@@ -91,8 +91,8 @@ input.controle_form {
 }
 
 .botao:hover {
-    color: rgb(0, 176, 80); /* (Opcional) Altera a cor ao passar o mouse */
-    text-decoration: underline; /* (Opcional) Adiciona sublinhado ao passar o mouse */
+    color: rgb(0, 176, 80); 
+    text-decoration: underline; 
 }
 
 #faixa {
@@ -103,7 +103,7 @@ input.controle_form {
 
 /* media query */
 
-/* Telas grandes (1920px e acima) */
+/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {
         height: 250px;
@@ -115,30 +115,30 @@ input.controle_form {
     }
 
     .form-contato {
-        display: flex; /* Usa flexbox para alinhar os itens */
-        flex-direction: column; /* Coloca o texto e o campo em uma coluna */
-        align-items: center; /* Alinha à esquerda */
-        margin-top: 10px; /* Ajusta margens para evitar sobreposição */
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 10px;
         margin-bottom: 20px;
     }
 
     .form-contato p {
-        margin: 0 0 5px 0; /* Espaço entre o texto e o campo */
-        font-size: 1.5rem; /* Tamanho do texto */
+        margin: 0 0 5px 0; 
+        font-size: 1.5rem; 
     }
 
     input.controle_form,
     textarea.campo_msg {
-        width: 100%; /* Ocupará toda a largura disponível */
-        max-width: 1200px; /* Define um limite para evitar excessos */
+        width: 100%;
+        max-width: 1200px;
         padding: 10px;
         font-size: 1.5rem;
         margin-bottom: 20px;
-        box-sizing: border-box; /* Garante que padding não afete o tamanho */
+        box-sizing: border-box; 
     }
 
     textarea.campo_msg {
-        height: 150px; /* Define altura para o textarea */
+        height: 150px; 
     }
 
     .obrcamp{
@@ -152,7 +152,7 @@ input.controle_form {
     }
 }
 
-/* Telas médias (768px a 1199px)*/
+/* telas médias (768px a 1199px)*/
 @media (min-width: 769px) {
     .banner {
         height: 120px;
@@ -168,30 +168,30 @@ input.controle_form {
     }
 
     .form-contato {
-        display: flex; /* Usa flexbox para alinhar os itens */
-        flex-direction: column; /* Coloca o texto e o campo em uma coluna */
-        align-items: center; /* Alinha à esquerda */
-        margin-top: 10px; /* Ajusta margens para evitar sobreposição */
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 10px; 
         margin-bottom: 20px;
     }
 
     .form-contato p {
-        margin: 0 0 5px 0; /* Espaço entre o texto e o campo */
-        font-size: 1.2rem; /* Tamanho do texto */
+        margin: 0 0 5px 0;
+        font-size: 1.2rem; 
     }
 
     input.controle_form,
     textarea.campo_msg {
-        width: 100%; /* Ocupará toda a largura disponível */
-        max-width: 1200px; /* Define um limite para evitar excessos */
+        width: 100%; 
+        max-width: 1200px; 
         padding: 10px;
         font-size: 1.2rem;
         margin-bottom: 20px;
-        box-sizing: border-box; /* Garante que padding não afete o tamanho */
+        box-sizing: border-box; 
     }
 
     textarea.campo_msg {
-        height: 150px; /* Define altura para o textarea */
+        height: 150px; 
     }
 
     .obrcamp{
@@ -205,7 +205,7 @@ input.controle_form {
     }
 }
 
-/* Telas pequenas (abaixo de 768px) */
+/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     .banner {
         height: 80px;
@@ -220,30 +220,30 @@ input.controle_form {
     }
 
     .form-contato {
-        display: flex; /* Usa flexbox para alinhar os itens */
-        flex-direction: column; /* Coloca o texto e o campo em uma coluna */
-        align-items: center; /* Alinha à esquerda */
-        margin-top: 10px; /* Ajusta margens para evitar sobreposição */
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 10px;
         margin-bottom: 20px;
     }
 
     .form-contato p {
-        margin: 0 0 5px 0; /* Espaço entre o texto e o campo */
-        font-size: 0.6rem; /* Tamanho do texto */
+        margin: 0 0 5px 0;
+        font-size: 0.6rem; 
     }
 
     input.controle_form,
     textarea.campo_msg {
-        width: 100%; /* Ocupará toda a largura disponível */
-        max-width: 1200px; /* Define um limite para evitar excessos */
+        width: 100%; 
+        max-width: 1200px; 
         padding: 10px;
         font-size: 0.6rem;
         margin-bottom: 20px;
-        box-sizing: border-box; /* Garante que padding não afete o tamanho */
+        box-sizing: border-box;
     }
 
     textarea.campo_msg {
-        height: 150px; /* Define altura para o textarea */
+        height: 150px;
     }
 
     .obrcamp{

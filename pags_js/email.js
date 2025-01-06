@@ -1,20 +1,17 @@
-// Inicializando o EmailJS 
-
-(function () {  
-    emailjs.init("nrIX3MAzLIeHjjVVn"); // Substitua por sua chave pública  
+(function () {  //integração com o emailJS
+    emailjs.init("nrIX3MAzLIeHjjVVn"); // chave/API da conta criada no emailJS para permitir o envio de emails
 })();  
 
-window.onload = function () {  
+window.onload = function () { //função que monitora o evento do formulário
     document.getElementById('contactForm').addEventListener('submit', function (event) {  
-        event.preventDefault();  
+        event.preventDefault();//impede o envio do formulário ao recarregar a página
 
-        // Enviar o formulário  
-        emailjs.sendForm('Contact_ID', 'template_xer52pr', this) // Substitua pelos seus valores  
+        emailjs.sendForm('Contact_ID', 'template_xer52pr', this) //envia o formulário usando um serviço de email e um template de menssagem criado no emailJS, ambos integrados pelo ID
             .then(() => {  
-                alert('Mensagem enviada com sucesso!');  
-                event.target.reset(); // Reseta o formulário  
+                alert('Mensagem enviada com sucesso!'); //se der certo, exibe uma mensagem de envio.
+                event.target.reset(); 
             }, (error) => {  
-                alert('Falha ao enviar a mensagem: ' + JSON.stringify(error));  
+                alert('Falha ao enviar a mensagem: ' + JSON.stringify(error));// se der errado, exibe uma mensagem de erro com os detalhes
             });  
     });  
 }; 

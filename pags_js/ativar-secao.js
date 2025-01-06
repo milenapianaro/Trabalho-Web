@@ -1,9 +1,9 @@
-function ativarSecao(id) { 
-    var secao = document.getElementById(id); 
-    if (secao.style.display === "none" || secao.style.display === "") { 
-        secao.style.display = "block"; 
+function ativarSecao(id) { // função para ativar ou desativar menus da matriz curricular
+    var secao = document.getElementById(id); //"identifica" a sessão
+    if (secao.style.display === "none" || secao.style.display === "") {  //verifica o estado atual da sessão fechado/em exibição
+        secao.style.display = "block"; //mostra a sessão
     } 
     else { 
-        secao.style.display = "none"; 
+        secao.style.display = "none"; //oculta a sessão
     } 
 }
