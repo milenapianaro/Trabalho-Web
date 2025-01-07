@@ -17,6 +17,7 @@ main {
     overflow-y: hidden;
     background-color: white;
     width: 100%;
+    text-align: justify;
 }
 
 p{
@@ -28,7 +29,7 @@ li{
 }
 
 .banner {
-    background-image: url('../Imagens/Quero Ser Aluno/teste.png');
+    background-image: url('../Imagens/Quero Ser Aluno/banner-entrada.png');
     background-size: cover;
     height: 600px;
     width: 100%;
@@ -49,6 +50,7 @@ li{
     flex-direction: row;
     justify-content: space-around;
     padding: 30px;
+    width: 95%;
     background-color: white;
 }
 
@@ -190,8 +192,8 @@ iframe {
 
     iframe {
         margin-left: 100px;
-        width: 400px;
-        height: 200px;
+        width: 500px;
+        height: 270px;
     }
 
     .processo-texto {

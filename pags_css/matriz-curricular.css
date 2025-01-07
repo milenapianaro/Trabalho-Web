@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body { 
@@ -251,7 +250,7 @@ section {
 
     .imagem-matriz img{
         width: 1400px;
-        height: 1400px;
+        height: auto;
     }
 
     .links{
@@ -277,7 +276,7 @@ section {
 
     .imagem-matriz img{
         width: 1000px;
-        height: 1000px;
+        height: auto;
     }
 
     .links{
@@ -307,7 +306,7 @@ section {
 
     .imagem-matriz img{
         width: 600px;
-        height: 600px;
+        height: auto;
     }
 
     .links{

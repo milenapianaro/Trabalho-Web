@@ -66,15 +66,14 @@ main {
 .caixas-inicio {  
     display: flex; 
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center; 
     justify-content: center;  
-    width: 50%;
+    width: 100%;
     margin: 20px 0px 20px 0px;
 }  
 
 .caixa {
-    width: 50%;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -111,7 +110,7 @@ main {
     border-radius: 50px;
     text-align: center;
     align-self: center;
-    width: 50%;
+    width: 60%;
     margin: 5px 15% 0px 15%;
     padding: 1rem 0 1rem 0;
     font-size: 25px;
@@ -145,12 +144,6 @@ main {
         padding: 2rem;
         font-size: 24px;
     }
-    .caixas-inicio {
-        width: 75%;
-    }
-    .caixa {
-        width: 50%;
-    }
 }
 
 /* telas pequenas (abaixo de 768px) */
@@ -159,15 +152,11 @@ main {
         padding: 3rem;
         font-size: 18px;
     }
+
     #banner-logo {
         width: 20%;
     }
-    .caixas-inicio {
-        width: 60%;
-    }
-    .caixa {
-        width: 50%;
-    }
+    
     .botoes{
         font-size: 15px;
     }
