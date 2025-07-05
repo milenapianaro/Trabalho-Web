@@ -9,11 +9,7 @@
     </head>
     <body>
         <?php
-<<<<<<< HEAD
             include '../componentes/header.php';
-=======
-            include 'componentes/header.php';
->>>>>>> 6b8835886e4e3a4fde76ac1c735e04c76df4aab3
         ?>
 
         <!-- Overlay para menu mobile -->
