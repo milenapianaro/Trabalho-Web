@@ -9,17 +9,17 @@
 <body>
     <header class="cabecalho-site">
         <div class="cabecalho-principal">
-            <a class="logo-cabecalho" href="pags_html/pagina-inicial.html" aria-label="Página Inicial">
+            <a class="logo-cabecalho" href="../pags_html/pagina-inicial.php" aria-label="Página Inicial">
                 <img class="logo-ifpr" src="../Imagens/Página Inicial/ifpr-logo.png" alt="Logo IFPR Campus Pinhais">
             </a>
             
             <nav class="navegacao-cabecalho" aria-label="Navegação principal">
-                <a class="link-navegacao" id="nav-aluno" href="pags_html/sou-aluno.html">
+                <a class="link-navegacao" id="nav-aluno" href="../pags_html/sou-aluno.php">
                     <img class="seta-navegacao" id="seta-aluno" src="../Imagens/Matriz Curricular/seta.png" alt="">
                     Sou Aluno
                 </a>
-                <a class="link-navegacao" href="pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>
-                <a class="link-navegacao" href="pags_html/form-contato.html">Contato</a>
+                <a class="link-navegacao" href="../pags_html/quero-ser-aluno.php">Quero Ser Aluno</a>
+                <a class="link-navegacao" href="../pags_html/form-contato.php">Contato</a>
             </nav>
             
             <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false">
@@ -31,11 +31,11 @@
         
         <div class="menu-suspenso" id="menu-suspenso" aria-hidden="true">
             <nav class="navegacao-suspensa" aria-label="Menu do aluno">
-                <a href="pags_html/form-login-mural.html">Mural dos Estudantes</a>
-                <a href="pags_html/manual-aluno.html">Manual do Aluno</a>
-                <a href="pags_html/plataformas.html">Plataformas e Recursos</a>
-                <a href="pags_html/matriz-curricular.html">Matriz Curricular</a>
-                <a href="pags_html/atendimento.html">E-mails e Atendimento</a>
+                <a href="../pags_html/form-login-mural.php">Mural dos Estudantes</a>
+                <a href="../pags_html/manual-aluno.php">Manual do Aluno</a>
+                <a href="../pags_html/plataformas.php">Plataformas e Recursos</a>
+                <a href="../pags_html/matriz-curricular.php">Matriz Curricular</a>
+                <a href="../pags_html/atendimento.php">E-mails e Atendimento</a>
             </nav>
         </div>
     </header>
