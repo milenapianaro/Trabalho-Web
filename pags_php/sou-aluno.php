@@ -38,29 +38,29 @@
 
                 <section class="paginas">
                     <div class="linha-botoes">
-                        <a class="bloco" href="../pags_html/mural-estudantes.php" target="_self">
+                        <a class="bloco" href="../pags_php/mural-estudantes.php" target="_self">
                             <img class= "icone" src="../Imagens/Sou Aluno/muraldosestudates.png">
                             <h3>Mural dos Estudantes</h3> 
                             <p>Espaço de comunicação entre os alunos do GTI. Participe de discussões, tire dúvidas, compartilhe avisos, eventos e novidades.</p>
                         </a>
-                        <a class="bloco" href="../pags_html/manual-aluno.php" target="_self">
+                        <a class="bloco" href="../pags_php/manual-aluno.php" target="_self">
                             <img class= "icone" src="../Imagens/Sou Aluno/manual.png">
                             <h3>Manual do Aluno</h3> 
                             <p>Veja informações sobre o método de avaliação, abono de faltas e segunda chamada, horários de atendimento, projetos de pesquisa e extensão, assistência estudantil e aproveitamento de estudos.</p>
                         </a>
                     </div>
                     <div class="linha-botoes">
-                        <a class="bloco" href="../pags_html/plataformas.php" target="_self">
+                        <a class="bloco" href="../pags_php/plataformas.php" target="_self">
                             <img class= "icone" src="../Imagens/Sou Aluno/plataformas.png">
                             <h3>Plataformas e Recursos</h3>
                             <p>Cadastre-se nas plataformas do IFPR, obtenha seu email institucional, acesse as bibliotecas e solicite sua carteira de estudante. Facilite sua vida acadêmica com nossos recursos tecnológicos.</p>
                         </a>
-                        <a class="bloco" href="../pags_html/matriz-curricular.php" target="_self">
+                        <a class="bloco" href="../pags_php/matriz-curricular.php" target="_self">
                             <img class= "icone" src="../Imagens/Sou Aluno/grade.png">
                             <h3>Matriz Curricular</h3> 
                             <p>Conheça o curso de Gestão da Tecnologia da Informação, explore as disciplinas, planeje suas horas complementares e aprenda mais sobre estágios. Organize seu semestre de forma eficiente.</p>
                         </a> 
-                        <a class="bloco" href="../pags_html/atendimento.php" target="_self">
+                        <a class="bloco" href="../pags_php/atendimento.php" target="_self">
                             <img class= "icone" src="../Imagens/Sou Aluno/atendimento.png">
                             <h3>E-mails e Atendimento</h3>
                             <p>Entre em contato com professores, coordenação e outros setores da instituição através dos emails disponíveis. Conecte-se e esclareça suas dúvidas de maneira rápida.</p>

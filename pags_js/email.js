@@ -6,7 +6,7 @@ window.onload = function () { //função que monitora o evento do formulário
     document.getElementById('contactForm').addEventListener('submit', function (event) {  
         event.preventDefault();//impede o envio do formulário ao recarregar a página
 
-        emailjs.sendForm('Contact_ID', 'template_xer52pr', this) //envia o formulário usando um serviço de email e um template de menssagem criado no emailJS, ambos integrados pelo ID
+        emailjs.sendForm('1256843259421159', 'template_xer52pr', this) //envia o formulário usando um serviço de email e um template de menssagem criado no emailJS, ambos integrados pelo ID
             .then(() => {  
                 alert('Mensagem enviada com sucesso!'); //se der certo, exibe uma mensagem de envio.
                 event.target.reset(); 

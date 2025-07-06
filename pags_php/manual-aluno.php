@@ -9,43 +9,23 @@
     </head>
 
     <body>
-        <header>
-            <div class="header">
-                <a class="header-logo" href="../pags_html/pagina-inicial.html">
-                    <img class="ifpr-logo" src="../Imagens/Página Inicial/ifpr-logo.png"  alt="Instituto Federal">
-                    <img class="ifpr-reduzido" src="../Imagens/Página Inicial/ifpr-reduzido.png" alt="Instituto Federal"> 
-                </a>
-                <nav class="header-navegacao">
-                    <a id="nav-aluno" href="../pags_html/sou-aluno.html">
-                        <img class="seta" id="seta-aluno" src="../Imagens/Matriz Curricular/seta.png">
-                        Sou Aluno
-                    </a>
-                    <a href="../pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>
-                    <a href="../pags_html/form-contato.html">Contato</a>
-                </nav>
-            </div>
-            <div class="menu-oculto">
-            <nav class="menu-nav">
-                <a href="../pags_html/sou-aluno.html/form-login-mural" target="_self"> Mural dos Estudantes</a>
-                <a href="../pags_html/manual-aluno.html" target="_self">Manual do Aluno</a>
-                <a href="../pags_html/plataformas.html" target="_self">Plataformas e Recursos</a>
-                <a href="../pags_html/matriz-curricular.html" target="_self">Matriz Curricular</a>
-                <a href="../pags_html/atendimento.html" target="_self">E-mails e Atendimento</a>
-            </nav>
-            </div>
-        </header> 
+    <?php include '../componentes/header.php'; ?>
         <main>
-            <figure class="banner">
-                <h1><b>Manual do Aluno</b></h1>
-            </figure>
+        <?php 
+            include '../componentes/banner.php';
+            banner('Manual do Aluno', '../Imagens/Sou Aluno/faxinha.png');
+        ?>
             <section class="descricao">
+                <div class="secao-conteudo">
                 <p>Vocês acabaram de ingressar em uma instituição federal de referência no ensino tecnológico e científico. Nossa infraestrutura e equipe foram pensadas para que você, estudante, se desenvolva como cidadão e profissional, consciente dos desafios do mundo do trabalho e da sociedade. Com o apoio técnico e humano aqui disponível, você estará preparado para atuar de forma crítica, empreendedora e sustentável, interagindo com a comunidade.</p>
                 <br>
                 <p>O Campus Pinhais, inaugurado em 2015, é comprometido com a educação técnica, científica e tecnológica de qualidade. Promovemos a união entre Ensino, Pesquisa, Extensão e Inovação, pilares essenciais para a evolução e preparo do aluno em um mundo em constante mudança.</p>
                 <br>
                 <p>Nesta página, apresentamos as informações que consideramos mais essenciais para a sua experiência no IFPR. Para que vocês conheçam mais da Instituição e das normas internas, recomendamos a leitura completa do <a class="hyperlink" href="https://ifpr.edu.br/pinhais/wp-content/uploads/sites/22/2018/12/Manual-do-Aluno_IFPR-Pinhais.pdf" target="_blank">Manual do Aluno</a>.</p> 
-                </section>
+                </div>
+            </section>
             <section class="avaliacao">
+                <div class="secao-conteudo">
                 <h2>Método de Avaliação</h2>
                 <br>
                 <p>A avaliação é fundamental na aprendizagem, proporcionando o diagnóstico do percurso formativo para professores e alunos. No IFPR, ela se dá através de conceitos ao invés de notas. Estes são:</p>
@@ -144,8 +124,10 @@
                 <p class="avaliacao-aviso">Além de <strong>conceito igual ou superior a C</strong>, o aluno precisa ter <strong>frequência total acima de 75%</strong> na disciplina para ser aprovado.</p>
                 <br>
                 <p>O IFPR considera a avaliação como um processo contínuo. Assim, os professores têm autonomia para fornecer diversas oportunidades aos alunos de demonstrar seu conhecimento ao longo do período letivo, incluindo recuperações paralelas e atendimentos fora do horário de aula.</p>
+                </div>
             </section>
             <section class="faltas">
+                <div class="secao-conteudo">
                 <h2>Abono de faltas e segunda chamada de avaliação</h2>
                 <br>
                 <p>Durante o período letivo, é obrigatória uma frequência mínima de 75% da carga horária total. <strong>Não há abono de faltas</strong>, exceto para ausência justificada pela Lei do Serviço Militar. Também não há segunda chamada formal para avaliações, salvo exceção da Lei do Serviço Militar.</p>
@@ -153,8 +135,10 @@
                 <p>A Direção de Ensino, Pesquisa e Extensão, junto aos professores dos componentes curriculares, pode dispensar esporadicamente os alunos de aulas regulares para participação em cursos intensivos, simpósios, seminários, congressos, entre outras atividades correlacionadas ao curso. Nessas situações, <strong>as faltas devem ser justificadas</strong> e deve ser oferecida a recuperação de avaliações formais ocorridas durante o período de ausência.</p>
                 <br>
                 <p>O registro de <strong>atestados</strong>, declarações e demais justificativas de ausências e não realização de atividades avaliativas podem ser feitas <a class="hyperlink" href="https://forms.gle/J1PMCYKiieXkXdYWA" target="_blank">clicando aqui</a>. Tais documentos não abonam faltas ou garantem direito à 2ª chamada, mas funcionam como registros a serem considerados por docentes e equipe pedagógica para possíveis tomadas de decisão sobre frequência, recuperações e resultados.</p>
+                </div>
             </section>
             <section class="projetosepesquisa">
+                <div class="secao-conteudo">
                 <h2>Projetos de pesquisa e extensão</h2>
                 <br>
                 <p>Aqui no IFPR, acreditamos firmemente que Ensino, Pesquisa e Extensão estão intrinsecamente ligados. Por isso, nossos professores estão empenhados em oferecer projetos de pesquisa e extensão aos alunos. Esses projetos visam uma formação multidisciplinar, proporcionando ao aluno uma educação ampla e adaptável aos cenários em constante mudança, além de identificar e potencializar as especificidades de cada indivíduo.</p>
@@ -171,8 +155,10 @@
                 </ul>
                 <br>
                 <p>Aproveite essas oportunidades para enriquecer sua experiência acadêmica e fortalecer seu perfil profissional!</p>
+                </div>
             </section>
             <section class="assistencia">
+                <div class="secao-conteudo">
                 <h2>Assistência Estudantil</h2>
                 <br>
                 <p>O IFPR possui uma Política de Apoio Estudantil desenvolvida pela Diretoria de Assuntos Estudantis e Atividades Especiais (DAES) da Pró-Reitoria de Ensino (PROENS). Esta política é voltada para garantir seu acesso, permanência e êxito no Instituto Federal do Paraná (IFPR), especialmente se você estiver em situação de vulnerabilidade socioeconômica.</p>
@@ -248,8 +234,10 @@
                 <p>A DAES também é responsável pelas questões de mobilidade estudantil, que envolvem os intercâmbios nacionais e internacionais. Atualmente, os intercâmbios têm ocorrido por meio do programa Ciência sem Fronteiras, do governo federal, o qual busca promover a consolidação, expansão e internacionalização da ciência, da tecnologia, da inovação e da competitividade brasileira.</p>
                 <br>
                 <p>Dúvidas? Entre em contato com a Seção Pedagógica e de Assuntos Estudantis (SEPAE) do seu câmpus através do email: <a href="mailto:sepae.pinhais@ifpr.edu.br">sepae.pinhais@ifpr.edu.br</a>. Estamos aqui para ajudar!</p>
+                </div>
             </section>
             <section class="aproveitamento">
+                <div class="secao-conteudo">
                 <h2>Aproveitamento de estudos anteriores</h2>
                 <br>
                 <p>Se você já cursou disciplinas ou etapas (séries, módulos, blocos) com êxito em outro curso, pode ser que você consiga aproveitar esses estudos aqui no IFPR, de acordo com a Resolução nº55/11 do Conselho Superior do IFPR (2011). Esse processo é possível tanto para componentes curriculares de outro curso quanto para disciplinas de Graduação em outras instituições de ensino superior.</p>
@@ -276,15 +264,11 @@
                 <p class="aproveitamento-aviso">Importante:  O aproveitamento de estudos não é permitido entre níveis de ensino diferentes.</p>
                 <br>
                 <p>Se tiver dúvidas ou precisar de ajuda, entre em contato com a Seção Pedagógica e de Assuntos Estudantis (SEPAE) no email <a href="mailto:sepae.pinhais@ifpr.edu.br">sepae.pinhais@ifpr.edu.br</a>. Estamos aqui para apoiar você!</p>
+                </div>
             </section>
             <div id="faixa"></div>
         </main>
+        <?php include '../componentes/footer.php'; ?>
+        <script src="../pags_js/ativar-secao.js"></script>
     </body>
-    <footer class="footer"> 
-        <div class="item instagram"><img src="../Imagens/Página Inicial/INSTAGRAM.png" alt="Instagram">Instagram</div> 
-        <div class="item facebook"><img src="../Imagens/Página Inicial/FACEBOOK.png" alt="Facebook">Facebook</div> 
-        <div class="item institucional"><img src="../Imagens/Página Inicial/IFPR_LOGO.png" alt="Institucional">Site Institucional</div> 
-    </footer>
-    <script src="../pags_js/header.js"></script>
-    <script src="../pags_js/ativar-secao.js"></script>
 </html>

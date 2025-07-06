@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../conexao.php'; // Conexão com o banco
 
 // Verificar se o usuário já está logado
 if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado'] === true) {
@@ -12,21 +13,32 @@ $erro = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $senha = $_POST['senha'] ?? '';
-    
-    // Aqui você pode adicionar validação real com banco de dados
-    // Por enquanto, vamos usar uma validação simples para demonstração
+
     if (!empty($email) && !empty($senha)) {
-        // Simular validação (em produção, isso seria feito com banco de dados)
-        if (filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($senha) >= 6) {
-            // Login bem-sucedido
-            $_SESSION['usuario_logado'] = true;
-            $_SESSION['email_usuario'] = $email;
-            $_SESSION['data_login'] = date('Y-m-d H:i:s');
-            
-            header('Location: mural-estudantes.php');
-            exit();
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $stmt = $conn->prepare("SELECT senha_hash FROM usuarios_login WHERE email = ?");
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+
+            if ($resultado->num_rows === 1) {
+                $usuario = $resultado->fetch_assoc();
+
+                if (password_verify($senha, $usuario['senha_hash'])) {
+                    $_SESSION['usuario_logado'] = true;
+                    $_SESSION['email_usuario'] = $email;
+                    $_SESSION['data_login'] = date('Y-m-d H:i:s');
+
+                    header('Location: mural-estudantes.php');
+                    exit();
+                } else {
+                    $erro = 'Senha incorreta.';
+                }
+            } else {
+                $erro = 'Usuário não encontrado.';
+            }
         } else {
-            $erro = 'E-mail ou senha inválidos.';
+            $erro = 'E-mail inválido.';
         }
     } else {
         $erro = 'Por favor, preencha todos os campos.';
@@ -67,7 +79,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p>Senha*:</p>  
                 <input type="password" class="controle_form" name="senha" placeholder="Insira sua senha" required>  
             </div>  
-            <div class="obrcamp">* Campos obrigatórios.</div>  
+            <div>
+                <a class="botao" href="../pags_php/cadastro.php" target="_blank"><p>Não possui uma conta? Clique aqui para fazer seu cadastro.</p></a>
+            </div>
+            <p class="obrcamp">*Campos obrigatórios.</p>  
             <br><button type="submit" class="botao">Entrar</button></br>  
         </form>  
     </main>  

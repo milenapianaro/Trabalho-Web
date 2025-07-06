@@ -8,31 +8,7 @@
         <title>Rota IFPR – Matriz Curricular</title>
     </head>
     <body>
-        <header>
-            <div class="header">
-                <a class="header-logo" href="../pags_html/pagina-inicial.html">
-                    <img class="ifpr-logo" src="../Imagens/Página Inicial/ifpr-logo.png"  alt="Instituto Federal">
-                    <img class="ifpr-reduzido" src="../Imagens/Página Inicial/ifpr-reduzido.png" alt="Instituto Federal"> 
-                </a>
-                <nav class="header-navegacao">
-                    <a id="nav-aluno" href="../pags_html/sou-aluno.html">
-                        <img class="seta" id="seta-aluno" src="../Imagens/Matriz Curricular/seta.png">
-                        Sou Aluno
-                    </a>
-                    <a href="../pags_html/quero-ser-aluno.html">Quero Ser Aluno</a>
-                    <a href="../pags_html/form-contato.html">Contato</a>
-                </nav>
-            </div>
-            <div class="menu-oculto">
-                <nav class="menu-nav">
-                    <a href="../pags_html/sou-aluno.html/form-login-mural" target="_self"> Mural dos Estudantes</a>
-                    <a href="../pags_html/manual-aluno.html" target="_self">Manual do Aluno</a>
-                    <a href="../pags_html/plataformas.html" target="_self">Plataformas e Recursos</a>
-                    <a href="../pags_html/matriz-curricular.html" target="_self">Matriz Curricular</a>
-                    <a href="../pags_html/atendimento.html" target="_self">E-mails e Atendimento</a>
-                </nav>
-            </div>
-        </header> 
+     <?php include '../componentes/header.php'; ?>
 
         <main>
             <figure class="banner">
@@ -364,11 +340,5 @@
         </main>
     </body>
     <div id="faixa"></div>
-    <footer class="footer"> 
-        <a href="https://www.instagram.com/ifprpinhaisoficial/" target="_blank"><div class="item instagram"><img src="../Imagens/Página Inicial/INSTAGRAM.png" alt="Instagram">Instagram</div></a>
-        <a href="https://www.facebook.com/IFPRCampusPinhais" target="_blank"><div class="item facebook"><img src="../Imagens/Página Inicial/FACEBOOK.png" alt="Facebook">Facebook</div></a>         
-        <a href="https://ifpr.edu.br/pinhais/" target="_blank"><div class="item institucional"><img src="../Imagens/Página Inicial/IFPR_LOGO.png" alt="Institucional">Site Institucional</div></a>         
-    </footer>
-    <script src="../pags_js/header.js"></script>
-    <script src="../pags_js/ativar-secao.js"></script>
+    <?php include '../componentes/footer.php'; ?>
 </html>

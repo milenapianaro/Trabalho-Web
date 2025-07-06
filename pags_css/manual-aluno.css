@@ -4,8 +4,6 @@
 }
 
 body { 
-    display: flex; 
-    flex-direction: column;
     min-height: 100vh;
     background-color: white;
     font-family: "Helvetica", sans-serif;
@@ -15,53 +13,55 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
     width: 100%;
     max-width: 1920px;
-    align-self: center;
     background-color: white;
-}
-
-p{
-    font-size: medium;
-}
-
-li{
-    font-size: medium;
-}
-.banner {
-    background-color: #009e47;
-    background-image: url("../Imagens/Sou Aluno/faxinha.png");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 20px;
-    min-height: 120px;
-    max-height: 120px;
-}
-
-.banner h1 {
-    color: white;
-    margin: 0;
-    font-size: 2rem;
-    font-weight: normal;
-}
-
-h1 {
-    margin-top: 4%;
-    margin-left: 30px;
-    font-size: 2rem;
-    color: white;
 }
 
 section {
     width: 100%;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 32px 40px;
     text-align: justify;
+}
+
+section > * {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-size: medium;
+}
+
+section h2 {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+section h3 {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+section ul, section ol {
+    padding-left: 20px;
+    margin-bottom: 18px;
+}
+
+section li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+    font-size: medium;
 }
 
 .descricao {
@@ -73,26 +73,28 @@ section {
     flex-direction: column;
 }
 
-ul, ol {
-    margin-left: 30px;
-}
-
-.avaliacao-aviso {
+.avaliacao-aviso, .aproveitamento-aviso {
     width: 60%;
     background-color: #292929;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
-    align-self: center;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avaliacao-aviso p {
+    margin-bottom: 0;
 }
 
 table {
     width: 60%;
-    align-self: center;
     border: solid 1px rgb(134, 204, 88);
     border-collapse: collapse;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 thead {
@@ -139,17 +141,19 @@ th, td {
 .assistencia-itens {
     display: flex;
     flex-direction: row;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px;
     border-bottom: solid 1px rgb(212, 212, 212);
 }
 
 .seta {
-    width: 12px;
-    height: 7px;
+    width: 18px;
+    height: 18px;
     padding-right: 10px;
     align-self: center;
-    margin-right: 3px;
+    margin-right: 8px;
     filter: brightness(0%);
+    object-fit: contain;
+    transition: transform 0.2s;
 }
 
 .assistencia-itens:hover {
@@ -159,6 +163,7 @@ th, td {
 
 .assistencia-itens:hover .seta {
     filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg); 
+    transform: scale(1.15);
 }
 
 .assistencia-descricao {
@@ -171,7 +176,6 @@ th, td {
 
 .assistencia-descricao p {
     background-color: rgb(241, 241, 241);
-    box-sizing: border-box;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 15px;
@@ -182,16 +186,6 @@ th, td {
 .aproveitamento {
     display: flex;
     flex-direction: column;
-}
-
-.aproveitamento-aviso {
-    width: 60%;
-    background-color: #292929;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    align-self: center;
-    color: white
 }
 
 #faixa {
@@ -211,40 +205,59 @@ th, td {
     text-decoration: underline;
 }
 
-/* media query */
-
-/* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {
         height: 250px;
         font-size: 2rem;
     }
-
     .descricao, .avaliacao, .faltas, .projetosepesquisa, .assistencia, .aproveitamento {
         font-size: 1.5rem;
     }
 }
 
-/* telas médias (768px a 1199px)*/
 @media (min-width: 769px) {
     .banner {
         height: 120px;
         font-size: 1.3rem;
     }
-
     .descricao, .avaliacao, .faltas, .projetosepesquisa, .assistencia, .aproveitamento {
         font-size: 1.1rem;
     }
 }
 
-/* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
     .banner {
         height: 80px;
         font-size: 1.0rem;
     }
-
     .descricao, .avaliacao, .faltas, .projetosepesquisa, .assistencia, .aproveitamento {
         font-size: 0.8rem;
+    }
+    section {
+        padding: 20px;
+    }
+    section > * {
+        max-width: 100%;
+        margin: 0;
+    }
+    section p {
+        margin-bottom: 15px;
+    }
+    section h2 {
+        margin-top: 12px;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+    }
+    section h3 {
+        margin-top: 12px;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    section ul, section ol {
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+    section li {
+        margin-bottom: 6px;
     }
 }

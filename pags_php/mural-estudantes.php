@@ -1,55 +1,46 @@
 <?php
 session_start();
+require_once '../conexao.php';
 
-// Verificar se o usuário está logado
-/*
-$usuarioLogado = isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado'] === true;
-
-// Se o usuário não estiver logado, redirecionar para o formulário de login
-if (!$usuarioLogado) {
+// Redirecionar se não estiver logado
+if (!isset($_SESSION['usuario_logado']) || $_SESSION['usuario_logado'] !== true) {
     header('Location: form-login-mural.php');
     exit();
 }
-*/
-// Processar envio de mensagem
+
+// Processar envio de mensagem ou imagem
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
     if ($_POST['acao'] === 'enviar_mensagem') {
         $mensagem = trim($_POST['mensagem'] ?? '');
         if (!empty($mensagem)) {
-            // Simular salvamento em banco de dados
             $novaMensagem = [
                 'id' => uniqid(),
                 'usuarioEmail' => $_SESSION['email_usuario'],
                 'usuarioNome' => $_SESSION['email_usuario'],
                 'mensagem' => $mensagem,
                 'tipo' => 'texto',
-                'dataCriacao' => date('Y-m-d H:i:s'),
-                'fixadoPor' => []
+                'dataCriacao' => date('Y-m-d H:i:s')
             ];
-            
-            // Em produção, isso seria salvo no banco de dados
+
             if (!isset($_SESSION['mensagens'])) {
                 $_SESSION['mensagens'] = [];
             }
             $_SESSION['mensagens'][] = $novaMensagem;
         }
-    } elseif ($_POST['acao'] === 'fixar_mensagem') {
-        $mensagemId = $_POST['mensagem_id'] ?? '';
-        // Lógica para fixar/desfixar mensagem
     } elseif ($_POST['acao'] === 'enviar_imagem') {
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
             $uploadDir = '../uploads/mural/';
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0755, true);
             }
-            
+
             $fileExtension = strtolower(pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION));
             $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-            
+
             if (in_array($fileExtension, $allowedExtensions)) {
                 $fileName = uniqid() . '.' . $fileExtension;
                 $uploadPath = $uploadDir . $fileName;
-                
+
                 if (move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadPath)) {
                     $novaMensagem = [
                         'id' => uniqid(),
@@ -57,10 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
                         'usuarioNome' => $_SESSION['email_usuario'],
                         'mensagem' => $uploadPath,
                         'tipo' => 'imagem',
-                        'dataCriacao' => date('Y-m-d H:i:s'),
-                        'fixadoPor' => []
+                        'dataCriacao' => date('Y-m-d H:i:s')
                     ];
-                    
+
                     if (!isset($_SESSION['mensagens'])) {
                         $_SESSION['mensagens'] = [];
                     }
@@ -71,53 +61,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
     }
 }
 
-// Obter filtro selecionado
 $filtro = $_GET['filtro'] ?? 'recentes';
+$mensagens = $_SESSION['mensagens'] ?? [];
 
-// Simular mensagens (em produção viriam do banco de dados)
-$mensagens = $_SESSION['mensagens'] ?? [
-    [
-        'id' => '1',
-        'usuarioEmail' => 'joao.silva@aluno.ifpr.edu.br',
-        'usuarioNome' => 'João Silva',
-        'mensagem' => 'Alguém tem informações sobre o projeto de extensão de programação web?',
-        'tipo' => 'texto',
-        'dataCriacao' => '2024-12-15 14:30:00',
-        'fixadoPor' => []
-    ],
-    [
-        'id' => '2',
-        'usuarioEmail' => 'maria.santos@aluno.ifpr.edu.br',
-        'usuarioNome' => 'Maria Santos',
-        'mensagem' => 'Lembrete: Reunião do grêmio estudantil amanhã às 18h no auditório!',
-        'tipo' => 'texto',
-        'dataCriacao' => '2024-12-14 16:45:00',
-        'fixadoPor' => ['maria.santos@aluno.ifpr.edu.br']
-    ],
-    [
-        'id' => '3',
-        'usuarioEmail' => 'pedro.costa@aluno.ifpr.edu.br',
-        'usuarioNome' => 'Pedro Costa',
-        'mensagem' => 'Formei um grupo de estudo para a prova de algoritmos. Quem quiser participar?',
-        'tipo' => 'texto',
-        'dataCriacao' => '2024-12-13 10:15:00',
-        'fixadoPor' => []
-    ]
-];
-
-// Aplicar filtros
+// Filtros
 if ($filtro === 'antigas') {
-    usort($mensagens, function($a, $b) {
-        return strtotime($a['dataCriacao']) - strtotime($b['dataCriacao']);
-    });
-} elseif ($filtro === 'fixadas') {
-    $mensagens = array_filter($mensagens, function($msg) {
-        return in_array($_SESSION['email_usuario'], $msg['fixadoPor']);
-    });
-} else { // recentes
-    usort($mensagens, function($a, $b) {
-        return strtotime($b['dataCriacao']) - strtotime($a['dataCriacao']);
-    });
+    usort($mensagens, fn($a, $b) => strtotime($a['dataCriacao']) - strtotime($b['dataCriacao']));
+} else {
+    usort($mensagens, fn($a, $b) => strtotime($b['dataCriacao']) - strtotime($a['dataCriacao']));
 }
 ?>
 
@@ -149,9 +100,6 @@ if ($filtro === 'antigas') {
                 <a href="?filtro=antigas" class="botao-filtro <?php echo $filtro === 'antigas' ? 'ativo' : ''; ?>">
                     Mais antigas
                 </a>
-                <a href="?filtro=fixadas" class="botao-filtro <?php echo $filtro === 'fixadas' ? 'ativo' : ''; ?>">
-                    Fixadas
-                </a>
             </div>
         </div>
         <a href="logout-mural.php" class="botao-sair">
@@ -179,13 +127,6 @@ if ($filtro === 'antigas') {
                                         <div class="email-usuario"><?php echo htmlspecialchars($msg['usuarioEmail']); ?></div>
                                     </div>
                                 </div>
-                                <form method="POST" style="display: inline;">
-                                    <input type="hidden" name="acao" value="fixar_mensagem">
-                                    <input type="hidden" name="mensagem_id" value="<?php echo $msg['id']; ?>">
-                                    <button type="submit" class="botao-fixar">
-                                        <i class="fas fa-star <?php echo in_array($_SESSION['email_usuario'], $msg['fixadoPor']) ? 'fixado' : ''; ?>"></i>
-                                    </button>
-                                </form>
                             </div>
                             
                             <div class="conteudo-mensagem">
@@ -231,13 +172,12 @@ if ($filtro === 'antigas') {
     </main>
     <?php include '../componentes/footer.php'; ?>
     <script>
-        // Função para enviar imagem
         function enviarImagem(input) {
             if (input.files && input.files[0]) {
                 const formData = new FormData();
                 formData.append('acao', 'enviar_imagem');
                 formData.append('imagem', input.files[0]);
-                
+
                 fetch(window.location.href, {
                     method: 'POST',
                     body: formData
@@ -252,7 +192,6 @@ if ($filtro === 'antigas') {
             }
         }
 
-        // Auto-scroll para a última mensagem
         window.onload = function() {
             const container = document.querySelector('.mensagens-container');
             if (container) {
@@ -261,4 +200,4 @@ if ($filtro === 'antigas') {
         };
     </script>
 </body>
-</html> 
+</html>

@@ -20,9 +20,10 @@ $stmt = $conn->prepare("INSERT INTO usuarios_login (nome_completo, genero, data_
 $stmt->bind_param("ssssss", $nome, $genero, $data_nascimento, $email, $matricula, $senha_hash);
 
 if ($stmt->execute()) {
-  echo "Cadastro realizado com sucesso!";
+    header("Location: cadastro_usuario_sucesso.php");
+    exit;
 } else {
-  echo "Erro ao cadastrar: " . $stmt->error;
+    echo "Erro ao cadastrar: " . $conn->error;
 }
 
 $stmt->close();

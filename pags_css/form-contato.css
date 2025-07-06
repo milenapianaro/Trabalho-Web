@@ -88,11 +88,38 @@ input.controle_form {
     height: 40px;
     border-radius: 4px;
     cursor: pointer;
+    color: #007a35;
 }
 
 .botao:hover {
     color: rgb(0, 176, 80); 
     text-decoration: underline; 
+}
+
+.link {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #009e47;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.link:hover {
+    background-color: #007a35;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.link p {
+    margin: 0;
+    font-size: 14px;
 }
 
 #faixa {
@@ -150,6 +177,15 @@ input.controle_form {
         height: 75px;
         font-size: 1.5rem;
     }
+
+    .link {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+
+    .link p {
+        font-size: 1.2rem;
+    }
 }
 
 /* telas médias (768px a 1199px)*/
@@ -203,6 +239,15 @@ input.controle_form {
         height: 50px;
         font-size: 1.5rem;
     }
+
+    .link {
+        padding: 12px 25px;
+        font-size: 1.0rem;
+    }
+
+    .link p {
+        font-size: 1.0rem;
+    }
 }
 
 /* telas pequenas (abaixo de 768px) */
@@ -253,6 +298,15 @@ input.controle_form {
     .botao{
         width: 100px;
         height: 50px;
+        font-size: 0.8rem;
+    }
+
+    .link {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .link p {
         font-size: 0.8rem;
     }
 }
