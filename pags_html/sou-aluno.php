@@ -14,9 +14,10 @@
         ?>
         <main>
             <section class="jornada">
-                <figure class="faixinha">
-                    <h1>Espaço do Aluno</h1>
-                </figure>
+                <?php
+                    include '../componentes/banner.php';
+                    banner('Espaço do Aluno', '../Imagens/Sou Aluno/faxinha.png');
+                ?>
                 <section id="painel">
                     <h2>Acesso Rápido</h2>
                     <section class="botoes">

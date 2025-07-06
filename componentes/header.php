@@ -44,4 +44,8 @@
     <div class="overlay-menu" id="overlay-menu" aria-hidden="true"></div>
 
     <!-- Menu lateral para mobile -->
-    <?php include 'menu-lateral.php'; ?> 
+    <?php include 'menu-lateral.php'; ?>
+
+    <script src="../pags_js/header.js"></script>
+</body>
+</html> 

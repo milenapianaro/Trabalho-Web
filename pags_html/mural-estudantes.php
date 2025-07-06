@@ -135,31 +135,31 @@ if ($filtro === 'antigas') {
 <body>
     <?php include '../componentes/header.php'; ?>
 
-    <figure class="banner">
-        <h1><b>Mural dos Estudantes</b></h1>
-    </figure>
+    <?php
+        include '../componentes/banner.php';
+        banner('Mural dos Estudantes', '../Imagens/Sou Aluno/faxinha.png');
+    ?>
 
-    <main>
-        <div class="container-mural">
-            <!-- Seção de filtros e logout -->
-            <div class="section-filtros">
-                <div class="filtros-container">
-                    <a href="?filtro=recentes" class="botao-filtro <?php echo $filtro === 'recentes' ? 'ativo' : ''; ?>">
-                        Mais recentes
-                    </a>
-                    <a href="?filtro=antigas" class="botao-filtro <?php echo $filtro === 'antigas' ? 'ativo' : ''; ?>">
-                        Mais antigas
-                    </a>
-                    <a href="?filtro=fixadas" class="botao-filtro <?php echo $filtro === 'fixadas' ? 'ativo' : ''; ?>">
-                        Fixadas
-                    </a>
-                </div>
-                <a href="logout-mural.php" class="botao-sair">
-                    <i class="fas fa-sign-out-alt"></i>
+    <div class="section-filtros">
+        <div class="section-filtros-content">
+            <div class="filtros-container">
+                <a href="?filtro=recentes" class="botao-filtro <?php echo $filtro === 'recentes' ? 'ativo' : ''; ?>">
+                    Mais recentes
+                </a>
+                <a href="?filtro=antigas" class="botao-filtro <?php echo $filtro === 'antigas' ? 'ativo' : ''; ?>">
+                    Mais antigas
+                </a>
+                <a href="?filtro=fixadas" class="botao-filtro <?php echo $filtro === 'fixadas' ? 'ativo' : ''; ?>">
+                    Fixadas
                 </a>
             </div>
-
-            <!-- Container das mensagens -->
+        </div>
+        <a href="logout-mural.php" class="botao-sair">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+    <main>
+        <div class="container-mural">
             <div class="mensagens-container">
                 <?php if (empty($mensagens)): ?>
                     <div class="mensagem-vazia">
@@ -208,33 +208,28 @@ if ($filtro === 'antigas') {
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
-
-            <!-- Input para nova mensagem -->
-            <div class="input-container">
-                <form method="POST" class="form-mensagem" enctype="multipart/form-data">
-                    <input type="hidden" name="acao" value="enviar_mensagem">
-                    <div class="input-wrapper">
-                        <button type="button" class="botao-camera" onclick="document.getElementById('upload-imagem').click()">
-                            <i class="fas fa-camera"></i>
-                        </button>
-                        <input type="file" id="upload-imagem" name="imagem" accept="image/*" style="display: none;" onchange="enviarImagem(this)">
-                        <input type="text" 
-                               name="mensagem" 
-                               class="input-mensagem" 
-                               placeholder="Escreva sua mensagem..."
-                               required>
-                        <button type="submit" class="botao-enviar">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
+        </div>
+        <div class="input-barra">
+            <form method="POST" class="form-mensagem" enctype="multipart/form-data">
+                <input type="hidden" name="acao" value="enviar_mensagem">
+                <div class="input-wrapper">
+                    <button type="button" class="botao-camera" onclick="document.getElementById('upload-imagem').click()">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                    <input type="file" id="upload-imagem" name="imagem" accept="image/*" style="display: none;" onchange="enviarImagem(this)">
+                    <input type="text" 
+                           name="mensagem" 
+                           class="input-mensagem" 
+                           placeholder="Escreva sua mensagem..."
+                           required>
+                </div>
+                <button type="submit" class="botao-enviar">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
         </div>
     </main>
-
-    <div id="faixa"></div>
     <?php include '../componentes/footer.php'; ?>
-
     <script>
         // Função para enviar imagem
         function enviarImagem(input) {
