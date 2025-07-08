@@ -1,6 +1,6 @@
 CREATE DATABASE  IF NOT EXISTS `cadastro_site` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `cadastro_site`;
--- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
 -- Host: localhost    Database: cadastro_site
 -- ------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `mensagens` (
   `caminho_imagem` varchar(255) DEFAULT NULL,
   `data_criacao` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `mensagens` (
 
 LOCK TABLES `mensagens` WRITE;
 /*!40000 ALTER TABLE `mensagens` DISABLE KEYS */;
-INSERT INTO `mensagens` VALUES (1,'sondeyalessandro@gmail.com','sondeyalessandro@gmail.com','teste','texto',NULL,'2025-07-06 16:57:46'),(2,'sondeyalessandro@gmail.com','sondeyalessandro@gmail.com','teste','texto',NULL,'2025-07-06 16:57:53');
+INSERT INTO `mensagens` VALUES (1,'sondeyalessandro@gmail.com','sondeyalessandro@gmail.com','teste','texto',NULL,'2025-07-06 16:57:46'),(2,'sondeyalessandro@gmail.com','sondeyalessandro@gmail.com','teste','texto',NULL,'2025-07-06 16:57:53'),(13,'ana@email.com','ana@email.com','686c69980ec59.png','imagem',NULL,'2025-07-07 21:43:04'),(12,'ana@email.com','ana@email.com','Mais um','texto',NULL,'2025-07-07 21:42:38'),(11,'ana@email.com','ana@email.com','A banda','texto',NULL,'2025-07-07 21:42:15'),(10,'ana@email.com','ana@email.com','A banda','texto',NULL,'2025-07-07 21:40:35'),(9,'ana@email.com','ana@email.com','A banda','texto',NULL,'2025-07-07 21:40:32');
 /*!40000 ALTER TABLE `mensagens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,7 +65,7 @@ CREATE TABLE `usuarios_login` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `matricula` (`matricula`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,17 +74,9 @@ CREATE TABLE `usuarios_login` (
 
 LOCK TABLES `usuarios_login` WRITE;
 /*!40000 ALTER TABLE `usuarios_login` DISABLE KEYS */;
-INSERT INTO `usuarios_login` VALUES (1,'ALESSANDRO SONDEY','Masculino','2003-12-19','sondeyalessandro@gmail.com','20241PIN10030040','$2y$10$37WUYjnZ137maAgfKb5y6uHdEgCu3QETGtmzMtNzRkK9tIYMsB8om','2025-07-06 19:40:02'),(2,'milena Pianaro','Feminino','1996-07-20','milena.pianaro@gmail.com','20241PIN100123456','$2y$10$MMmQ2L16ofZaUt8yvSSF/e/ZlkUonkjre6OouFbWMsPMMfuaMTA4K','2025-07-06 20:48:52'),(3,'LEO ZENI','Masculino','1988-03-25','leozeni@teste.com','123456789','$2y$10$cR.7FcJyQ77XtVGx7F2wb.OVnzXo83l63ckWOBnt021Ndt2w0Nqv2','2025-07-06 20:53:56'),(4,'LEO ZENI','Masculino','1988-03-25','leozeni@teste.com.br','456987','$2y$10$zI92KXNo91NXbmvuN73gGucfhoShYLeAg/4UFEcEBwiC.oLtMyWW.','2025-07-06 20:55:13'),(5,'LEO ZENI','Masculino','1988-03-25','leozeni@teste.com.br.org','4569878','$2y$10$QqHBrzhCkJmGgdYYyb3M9u9t2c17.FMMUJtv9INlZlHpCDyWNgzYK','2025-07-06 21:00:48'),(6,'LEO ZENI','Feminino','1988-03-25','leozeni@teste.com.br.org.gov','1232','$2y$10$wqPmcbsOyuQmFkNXRmohFu6tEJrEJT85JWBaIIb8iz4H1yVTCoEq.','2025-07-06 21:01:57');
+INSERT INTO `usuarios_login` VALUES (1,'ALESSANDRO SONDEY','Masculino','2003-12-19','sondeyalessandro@gmail.com','20241PIN10030040','$2y$10$37WUYjnZ137maAgfKb5y6uHdEgCu3QETGtmzMtNzRkK9tIYMsB8om','2025-07-06 19:40:02'),(2,'milena Pianaro','Feminino','1996-07-20','milena.pianaro@gmail.com','20241PIN100123456','$2y$10$MMmQ2L16ofZaUt8yvSSF/e/ZlkUonkjre6OouFbWMsPMMfuaMTA4K','2025-07-06 20:48:52'),(3,'LEO ZENI','Masculino','1988-03-25','leozeni@teste.com','123456789','$2y$10$cR.7FcJyQ77XtVGx7F2wb.OVnzXo83l63ckWOBnt021Ndt2w0Nqv2','2025-07-06 20:53:56'),(4,'LEO ZENI','Masculino','1988-03-25','leozeni@teste.com.br','456987','$2y$10$zI92KXNo91NXbmvuN73gGucfhoShYLeAg/4UFEcEBwiC.oLtMyWW.','2025-07-06 20:55:13'),(5,'LEO ZENI','Masculino','1988-03-25','leozeni@teste.com.br.org','4569878','$2y$10$QqHBrzhCkJmGgdYYyb3M9u9t2c17.FMMUJtv9INlZlHpCDyWNgzYK','2025-07-06 21:00:48'),(6,'LEO ZENI','Feminino','1988-03-25','leozeni@teste.com.br.org.gov','1232','$2y$10$wqPmcbsOyuQmFkNXRmohFu6tEJrEJT85JWBaIIb8iz4H1yVTCoEq.','2025-07-06 21:01:57'),(7,'Ana','Feminino','2000-01-01','ana@email.com','2025PIN121545','$2y$10$OekTGyU8tYxgHzL0aJKP2OElPTQDdCeNLnWcvFW4fXTgGAp90xSzW','2025-07-08 00:19:51');
 /*!40000 ALTER TABLE `usuarios_login` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'cadastro_site'
---
-
---
--- Dumping routines for database 'cadastro_site'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -95,4 +87,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-07-06 20:39:22
+-- Dump completed on 2025-07-08  0:08:27
