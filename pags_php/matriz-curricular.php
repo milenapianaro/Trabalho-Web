@@ -11,31 +11,39 @@
      <?php include '../componentes/header.php'; ?>
 
         <main>
-            <figure class="banner">
-                <h1><b>Matriz Curricular</b></h1>
-            </figure>
+            <?php
+                include '../componentes/banner.php';
+                banner('Matriz Curricular', '../Imagens/Sou Aluno/faxinha.png');
+            ?>
             <section class="descricao">
-                <p>O Curso Superior de Tecnologia em Gestão da Tecnologia da Informação do IFPR tem como objetivo formar profissionais com uma sólida fundamentação em Gestão e Tecnologia da Informação. Este curso proporciona uma formação integrada e estratégica, combinando componentes dessas duas grandes áreas, garantindo uma educação interdisciplinar que permite aos futuros gestores navegar de maneira consciente e estratégica entre elas, tornando-os indispensáveis para empresas que utilizam Tecnologia da Informação em seus processos de gestão.</p>
-                <br>
-                <p>O nosso curso oferece uma sólida base nessas duas áreas, preparando você para se destacar no mercado de trabalho. Com 2400 horas-aula, distribuídas em seis períodos, além de 240 horas de atividades complementares, o curso proporciona uma educação integrada e estratégica. Como tecnólogo formado pelo IFPR, você estará pronto para atuar em diversas áreas, desde funções operacionais até papéis de planejamento e gestão executiva.</p>
-                <br>
-                <p>Durante o curso, você vai adquirir habilidades que permitirão integrar conceitos fundamentais de TI no seu ambiente de trabalho, assegurando a coleta, armazenamento e distribuição correta e íntegra de dados e informações. Isso tudo com o objetivo de alcançar a eficiência gerencial nas organizações. Além disso, você será capacitado para gerenciar processos, incluindo planejamento, controle, comunicação e tomada de decisão, aplicando seus conhecimentos de forma eficaz e eficiente.</p>
+                <div class="descricao-container">
+                    <p>O Curso Superior de Tecnologia em Gestão da Tecnologia da Informação do IFPR tem como objetivo formar profissionais com uma sólida fundamentação em Gestão e Tecnologia da Informação. Este curso proporciona uma formação integrada e estratégica, combinando componentes dessas duas grandes áreas, garantindo uma educação interdisciplinar que permite aos futuros gestores navegar de maneira consciente e estratégica entre elas, tornando-os indispensáveis para empresas que utilizam Tecnologia da Informação em seus processos de gestão.</p>
+                    <br>
+                    <p>O nosso curso oferece uma sólida base nessas duas áreas, preparando você para se destacar no mercado de trabalho. Com 2400 horas-aula, distribuídas em seis períodos, além de 240 horas de atividades complementares, o curso proporciona uma educação integrada e estratégica. Como tecnólogo formado pelo IFPR, você estará pronto para atuar em diversas áreas, desde funções operacionais até papéis de planejamento e gestão executiva.</p>
+                    <br>
+                    <p>Durante o curso, você vai adquirir habilidades que permitirão integrar conceitos fundamentais de TI no seu ambiente de trabalho, assegurando a coleta, armazenamento e distribuição correta e íntegra de dados e informações. Isso tudo com o objetivo de alcançar a eficiência gerencial nas organizações. Além disso, você será capacitado para gerenciar processos, incluindo planejamento, controle, comunicação e tomada de decisão, aplicando seus conhecimentos de forma eficaz e eficiente.</p>
+                </div>
             </section>
             <figure class="imagem-matriz">
                 <img src="../Imagens/Matriz Curricular/matriz.png">
             </figure>
             <section class="links">
-                <a href="https://ifpr.edu.br/pinhais/wp-content/uploads/sites/22/2019/06/PPC_GTI_NovoModelo_2019_06_17-Versao-Final.pdf" target="_blank">Projeto Pedagógico</a>
-                <a href="https://ifpr.edu.br/pinhais/wp-content/uploads/sites/22/2019/08/Matriz-Curricular.pdf" target="_blank">Matriz Curricular</a>
-                <a href="https://ifpr.edu.br/pinhais/wp-content/uploads/sites/22/2019/08/Ementas.pdf" target="_blank">Ementas</a>
+                <div class="links-container">
+                    <a href="https://ifpr.edu.br/pinhais/wp-content/uploads/sites/22/2019/06/PPC_GTI_NovoModelo_2019_06_17-Versao-Final.pdf" target="_blank">Projeto Pedagógico</a>
+                    <a href="https://ifpr.edu.br/pinhais/wp-content/uploads/sites/22/2019/08/Matriz-Curricular.pdf" target="_blank">Matriz Curricular</a>
+                    <a href="https://ifpr.edu.br/pinhais/wp-content/uploads/sites/22/2019/08/Ementas.pdf" target="_blank">Ementas</a>
+                </div>
             </section>
             <section class="disciplinas">
-                <h2>Disciplinas</h2>
-                <br>
-                <p>Diferentemente de outros cursos que focam apenas na formação gerencial ou tecnológica, o IFPR oferece uma formação completa que preenche todas as lacunas. Aqui, você vai entender tanto os aspectos tecnológicos quanto os de gestão, estando pronto para enfrentar os desafios do mercado.</p>
+                <div class="disciplinas-container">
+                    <h2>Disciplinas</h2>
+                    <br>
+                    <p>Diferentemente de outros cursos que focam apenas na formação gerencial ou tecnológica, o IFPR oferece uma formação completa que preenche todas as lacunas. Aqui, você vai entender tanto os aspectos tecnológicos quanto os de gestão, estando pronto para enfrentar os desafios do mercado.</p>
+                </div>
             </section>
             <section class="grade">
-                <div class="semestre-titulo" onclick="ativarSecao('sem1')">
+                <div class="grade-container">
+                    <div class="semestre-titulo" onclick="ativarSecao('sem1')">
                     <img src="../Imagens/Matriz Curricular/seta.png" class="seta">
                     <h2>1º Período</h2>
                 </div>
@@ -291,54 +299,58 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
             <section class="atividades-complementares">
-                <h2>Atividades Complementares</h2>
-                <br>
-                <p>As Atividades Complementares são essenciais para enriquecer sua formação no Curso Superior de Tecnologia em Gestão da Tecnologia da Informação do IFPR. Elas vão além dos conhecimentos disciplinares previstos na matriz curricular do curso, promovendo o desenvolvimento pessoal, profissional, cultural e social.</p>
-                <br>
-                <p>Essas atividades são obrigatórias e você deve completar um total de 240 horas, o que corresponde a 12% da carga horária total do curso, para poder colar grau. O regulamento das Atividades Complementares está disponível como apêndice do Projeto Pedagógico do Curso.</p>
-                <br>
-                <p>Para saber mais sobre como compor suas Atividades Complementares no Curso Superior de Tecnologia em Gestão da Tecnologia da Informação, acesse a tabela detalhada através do link abaixo. Lá, você encontrará todas as informações e confirmações necessárias para cumprir as 240 horas obrigatórias, essenciais para sua formação integral. Este recurso é fundamental para guiar você no desenvolvimento de habilidades e conhecimentos práticos e teóricos ao longo do curso.</p>
-                <br>
-                <a class="atividades-documento" href="../Imagens/Matriz Curricular/horas-complementares.pdf" target="_blank">Tabela de Atividades Complementares</a>
-                <br>
-                <h3>Precisa protocolar suas horas?</h3>
-                <br>
-                <p>Ei, estudante do IFPR! Está pronto para protocolar suas horas complementares?</p>
-                <p>Aqui no IFPR, tudo é feito de forma 100% virtual para facilitar sua vida. Você só precisa preencher o <a class="form" href="https://ifpr.edu.br/wp-content/uploads/2015/07/REQUERIMENTO-GERAL.pdf" target="_blank">Formulário de Requerimento</a> e enviá-lo para a Secretaria Acadêmica no email:<a href="mailto:secac.pinhais@ifpr.edu.br"> secac.pinhais@ifpr.edu.br</a>.</p>
-                <p>Após isso, à Secretaria Acadêmica (SECAC) cria um processo no Sistema Eletrônico de Informações (SEI) e o encaminha à Coordenação do Curso. A Coordenação avalia e emite o parecer no SEI. A SECAC registra as horas complementares no sistema acadêmico (SIGAA), informa o discente por e-mail e finaliza o processo no SEI.</p>
-                <br>
-                <b><i>OBSERVAÇÃO IMPORTANTE:</i></b>
-                <br>
-                <p>Caso seja necessária comprovação física de algum documento, o discente será comunicado para apresentá-lo na Secretaria Acadêmica.</p>
-                <br>
+                <div class="atividades-container">
+                    <h2>Atividades Complementares</h2>
+                    <br>
+                    <p>As Atividades Complementares são essenciais para enriquecer sua formação no Curso Superior de Tecnologia em Gestão da Tecnologia da Informação do IFPR. Elas vão além dos conhecimentos disciplinares previstos na matriz curricular do curso, promovendo o desenvolvimento pessoal, profissional, cultural e social.</p>
+                    <br>
+                    <p>Essas atividades são obrigatórias e você deve completar um total de 240 horas, o que corresponde a 12% da carga horária total do curso, para poder colar grau. O regulamento das Atividades Complementares está disponível como apêndice do Projeto Pedagógico do Curso.</p>
+                    <br>
+                    <p>Para saber mais sobre como compor suas Atividades Complementares no Curso Superior de Tecnologia em Gestão da Tecnologia da Informação, acesse a tabela detalhada através do link abaixo. Lá, você encontrará todas as informações e confirmações necessárias para cumprir as 240 horas obrigatórias, essenciais para sua formação integral. Este recurso é fundamental para guiar você no desenvolvimento de habilidades e conhecimentos práticos e teóricos ao longo do curso.</p>
+                    <br>
+                    <a class="atividades-documento" href="../Imagens/Matriz Curricular/horas-complementares.pdf" target="_blank">Tabela de Atividades Complementares</a>
+                    <br>
+                    <h3>Precisa protocolar suas horas?</h3>
+                    <br>
+                    <p>Ei, estudante do IFPR! Está pronto para protocolar suas horas complementares?</p>
+                    <p>Aqui no IFPR, tudo é feito de forma 100% virtual para facilitar sua vida. Você só precisa preencher o <a class="form" href="https://ifpr.edu.br/wp-content/uploads/2015/07/REQUERIMENTO-GERAL.pdf" target="_blank">Formulário de Requerimento</a> e enviá-lo para a Secretaria Acadêmica no email:<a href="mailto:secac.pinhais@ifpr.edu.br"> secac.pinhais@ifpr.edu.br</a>.</p>
+                    <p>Após isso, à Secretaria Acadêmica (SECAC) cria um processo no Sistema Eletrônico de Informações (SEI) e o encaminha à Coordenação do Curso. A Coordenação avalia e emite o parecer no SEI. A SECAC registra as horas complementares no sistema acadêmico (SIGAA), informa o discente por e-mail e finaliza o processo no SEI.</p>
+                    <br>
+                    <b><i>OBSERVAÇÃO IMPORTANTE:</i></b>
+                    <br>
+                    <p>Caso seja necessária comprovação física de algum documento, o discente será comunicado para apresentá-lo na Secretaria Acadêmica.</p>
+                    <br>
                 </div>
             </section>
             <section class="estagios">
-                <h2>Estágios</h2>
-                <br>
-                <p>Na estrutura do Curso Superior de Tecnologia em Gestão da Tecnologia da Informação, o estágio é atividade complementar à formação profissional, representando no curso e para a formação dos discentes a real possibilidade do desenvolvimento de saberes profissionais e competências validadas pela integração da teoria e da prática.</p>
-                <br>
-                <h3>Objetivos do Estágio</h3>
-                <br>
-                <p>O estágio tem como objetivo o aprendizado de competências próprias da atividade profissional e a contextualização curricular, ajudando no desenvolvimento da sua vida cidadã e profissional. Os estágios podem ser estabelecidos por meio de organizações de integração escola/aluno/empresa ou diretamente pela organização pública ou privada concedente, através de convênios com o IFPR. Isso garante que as atividades desenvolvidas sejam pertinentes às áreas de Gestão da Tecnologia da Informação.</p>
-                <br>
-                <h3>Oportunidades de Estágio</h3>
-                <br>
-                <p></p>
-                <br>
-                <ul>
-                    <li><strong>Ofertas do IFPR:</strong>O IFPR ocasionalmente oferece oportunidades de estágio, tanto dentro da instituição quanto em parceria com empresas e organizações externas. Estas oportunidades são anunciadas periodicamente e podem ser uma excelente forma de aplicar seus conhecimentos e adquirir experiência prática.</li>
+                <div class="estagios-container">
+                    <h2>Estágios</h2>
                     <br>
-                    <li><strong>Iniciativa Própria:</strong> Além das oportunidades oferecidas pelo IFPR, você é incentivado a procurar estágios por conta própria. Buscar ativamente por estágios pode ampliar suas possibilidades, proporcionando experiências valiosas e diversificadas no mercado de trabalho. Você pode procurar vagas em plataformas de emprego, sites de empresas, redes de contato profissional, eventos de networking, feiras de carreiras e até mesmo redes sociais profissionais como o LinkedIn.</li>
-                    
-                </ul>
-                <br>
-                <p>Durante o estágio, você contará com a supervisão de um membro do corpo docente do curso e a participação de um técnico do campo de estágio. O estágio não-obrigatório pode contabilizar créditos no seu histórico escolar, como atividade complementar, até o limite de 120 horas.</p>
+                    <p>Na estrutura do Curso Superior de Tecnologia em Gestão da Tecnologia da Informação, o estágio é atividade complementar à formação profissional, representando no curso e para a formação dos discentes a real possibilidade do desenvolvimento de saberes profissionais e competências validadas pela integração da teoria e da prática.</p>
+                    <br>
+                    <h3>Objetivos do Estágio</h3>
+                    <br>
+                    <p>O estágio tem como objetivo o aprendizado de competências próprias da atividade profissional e a contextualização curricular, ajudando no desenvolvimento da sua vida cidadã e profissional. Os estágios podem ser estabelecidos por meio de organizações de integração escola/aluno/empresa ou diretamente pela organização pública ou privada concedente, através de convênios com o IFPR. Isso garante que as atividades desenvolvidas sejam pertinentes às áreas de Gestão da Tecnologia da Informação.</p>
+                    <br>
+                    <h3>Oportunidades de Estágio</h3>
+                    <br>
+                    <p></p>
+                    <br>
+                    <ul>
+                        <li><strong>Ofertas do IFPR:</strong>O IFPR ocasionalmente oferece oportunidades de estágio, tanto dentro da instituição quanto em parceria com empresas e organizações externas. Estas oportunidades são anunciadas periodicamente e podem ser uma excelente forma de aplicar seus conhecimentos e adquirir experiência prática.</li>
+                        <br>
+                        <li><strong>Iniciativa Própria:</strong> Além das oportunidades oferecidas pelo IFPR, você é incentivado a procurar estágios por conta própria. Buscar ativamente por estágios pode ampliar suas possibilidades, proporcionando experiências valiosas e diversificadas no mercado de trabalho. Você pode procurar vagas em plataformas de emprego, sites de empresas, redes de contato profissional, eventos de networking, feiras de carreiras e até mesmo redes sociais profissionais como o LinkedIn.</li>
+                        
+                    </ul>
+                    <br>
+                    <p>Durante o estágio, você contará com a supervisão de um membro do corpo docente do curso e a participação de um técnico do campo de estágio. O estágio não-obrigatório pode contabilizar créditos no seu histórico escolar, como atividade complementar, até o limite de 120 horas.</p>
+                </div>
             </section>
         </main>
     </body>
     <div id="faixa"></div>
+    <script src="../pags_js/ativar-secao.js"></script>
     <?php include '../componentes/footer.php'; ?>
-</html>

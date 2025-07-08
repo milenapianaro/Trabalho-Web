@@ -13,19 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
     if ($_POST['acao'] === 'enviar_mensagem') {
         $mensagem = trim($_POST['mensagem'] ?? '');
         if (!empty($mensagem)) {
-            $novaMensagem = [
-                'id' => uniqid(),
-                'usuarioEmail' => $_SESSION['email_usuario'],
-                'usuarioNome' => $_SESSION['email_usuario'],
-                'mensagem' => $mensagem,
-                'tipo' => 'texto',
-                'dataCriacao' => date('Y-m-d H:i:s')
-            ];
-
-            if (!isset($_SESSION['mensagens'])) {
-                $_SESSION['mensagens'] = [];
-            }
-            $_SESSION['mensagens'][] = $novaMensagem;
+            $stmt = $conn->prepare("INSERT INTO mensagens (usuario_email, usuario_nome, mensagem, tipo) VALUES (?, ?, ?, 'texto')");
+            $stmt->bind_param("sss", $_SESSION['email_usuario'], $_SESSION['email_usuario'], $mensagem);
+            $stmt->execute();
+            
+            // Redirecionar para evitar reenvio da mensagem
+            header('Location: mural-estudantes.php' . (isset($_GET['filtro']) ? '?filtro=' . $_GET['filtro'] : ''));
+            exit();
         }
     } elseif ($_POST['acao'] === 'enviar_imagem') {
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
@@ -42,19 +36,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
                 $uploadPath = $uploadDir . $fileName;
 
                 if (move_uploaded_file($_FILES['imagem']['tmp_name'], $uploadPath)) {
-                    $novaMensagem = [
-                        'id' => uniqid(),
-                        'usuarioEmail' => $_SESSION['email_usuario'],
-                        'usuarioNome' => $_SESSION['email_usuario'],
-                        'mensagem' => $uploadPath,
-                        'tipo' => 'imagem',
-                        'dataCriacao' => date('Y-m-d H:i:s')
-                    ];
-
-                    if (!isset($_SESSION['mensagens'])) {
-                        $_SESSION['mensagens'] = [];
-                    }
-                    $_SESSION['mensagens'][] = $novaMensagem;
+                    $stmt = $conn->prepare("INSERT INTO mensagens (usuario_email, usuario_nome, mensagem, tipo) VALUES (?, ?, ?, 'imagem')");
+                    $stmt->bind_param("sss", $_SESSION['email_usuario'], $_SESSION['email_usuario'], $fileName);
+                    $stmt->execute();
+                    
+                    // Redirecionar para evitar reenvio da imagem
+                    header('Location: mural-estudantes.php' . (isset($_GET['filtro']) ? '?filtro=' . $_GET['filtro'] : ''));
+                    exit();
                 }
             }
         }
@@ -62,13 +50,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
 }
 
 $filtro = $_GET['filtro'] ?? 'recentes';
-$mensagens = $_SESSION['mensagens'] ?? [];
 
-// Filtros
-if ($filtro === 'antigas') {
-    usort($mensagens, fn($a, $b) => strtotime($a['dataCriacao']) - strtotime($b['dataCriacao']));
-} else {
-    usort($mensagens, fn($a, $b) => strtotime($b['dataCriacao']) - strtotime($a['dataCriacao']));
+// Buscar mensagens do banco de dados
+$orderBy = ($filtro === 'antigas') ? 'ASC' : 'DESC';
+$stmt = $conn->prepare("SELECT id, usuario_email, usuario_nome, mensagem, tipo, data_criacao FROM mensagens ORDER BY data_criacao $orderBy");
+$stmt->execute();
+$result = $stmt->get_result();
+$mensagens = [];
+
+while ($row = $result->fetch_assoc()) {
+    $mensagens[] = [
+        'id' => $row['id'],
+        'usuarioEmail' => $row['usuario_email'],
+        'usuarioNome' => $row['usuario_nome'],
+        'mensagem' => $row['tipo'] === 'imagem' ? '../uploads/mural/' . $row['mensagem'] : $row['mensagem'],
+        'tipo' => $row['tipo'],
+        'dataCriacao' => $row['data_criacao']
+    ];
 }
 ?>
 
@@ -94,10 +92,10 @@ if ($filtro === 'antigas') {
     <div class="section-filtros">
         <div class="section-filtros-content">
             <div class="filtros-container">
-                <a href="?filtro=recentes" class="botao-filtro <?php echo $filtro === 'recentes' ? 'ativo' : ''; ?>">
+                <a href="?filtro=antigas" class="botao-filtro <?php echo $filtro === 'antigas' ? 'ativo' : ''; ?>">
                     Mais recentes
                 </a>
-                <a href="?filtro=antigas" class="botao-filtro <?php echo $filtro === 'antigas' ? 'ativo' : ''; ?>">
+                <a href="?filtro=recentes" class="botao-filtro <?php echo $filtro === 'recentes' ? 'ativo' : ''; ?>">
                     Mais antigas
                 </a>
             </div>
@@ -123,8 +121,8 @@ if ($filtro === 'antigas') {
                                         <i class="fas fa-user"></i>
                                     </div>
                                     <div class="info-usuario">
-                                        <div class="nome-usuario"><?php echo htmlspecialchars($msg['usuarioNome']); ?></div>
-                                        <div class="email-usuario"><?php echo htmlspecialchars($msg['usuarioEmail']); ?></div>
+                                        <div class="nome-usuario"><?php echo htmlspecialchars($msg['usuarioNome'] ?? ''); ?></div>
+                                        <div class="email-usuario"><?php echo htmlspecialchars($msg['usuarioEmail'] ?? ''); ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -132,13 +130,13 @@ if ($filtro === 'antigas') {
                             <div class="conteudo-mensagem">
                                 <?php if ($msg['tipo'] === 'imagem'): ?>
                                     <div class="container-imagem">
-                                        <img src="<?php echo htmlspecialchars($msg['mensagem']); ?>" 
+                                        <img src="<?php echo htmlspecialchars($msg['mensagem'] ?? ''); ?>" 
                                              alt="Imagem da mensagem" 
                                              class="imagem-mensagem"
                                              onerror="this.style.display='none'">
                                     </div>
                                 <?php else: ?>
-                                    <p class="texto-mensagem"><?php echo nl2br(htmlspecialchars($msg['mensagem'])); ?></p>
+                                    <p class="texto-mensagem"><?php echo nl2br(htmlspecialchars($msg['mensagem'] ?? '')); ?></p>
                                 <?php endif; ?>
                             </div>
                             
@@ -171,33 +169,6 @@ if ($filtro === 'antigas') {
         </div>
     </main>
     <?php include '../componentes/footer.php'; ?>
-    <script>
-        function enviarImagem(input) {
-            if (input.files && input.files[0]) {
-                const formData = new FormData();
-                formData.append('acao', 'enviar_imagem');
-                formData.append('imagem', input.files[0]);
-
-                fetch(window.location.href, {
-                    method: 'POST',
-                    body: formData
-                }).then(response => {
-                    if (response.ok) {
-                        window.location.reload();
-                    }
-                }).catch(error => {
-                    console.error('Erro ao enviar imagem:', error);
-                    alert('Erro ao enviar imagem. Tente novamente.');
-                });
-            }
-        }
-
-        window.onload = function() {
-            const container = document.querySelector('.mensagens-container');
-            if (container) {
-                container.scrollTop = container.scrollHeight;
-            }
-        };
-    </script>
+    <script src="../pags_js/mural-estudantes.js"></script>
 </body>
 </html>

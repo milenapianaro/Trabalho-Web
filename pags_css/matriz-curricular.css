@@ -23,10 +23,13 @@ main {
 
 p{
     font-size: medium;
+    line-height: 1.7;
+    margin-bottom: 18px;
 }
 
 li{
     font-size: medium;
+    line-height: 1.7;
 }
 
 .banner {
@@ -60,6 +63,26 @@ section {
     text-align: justify;
     background-color: #f7f7f7;
     font-family: "Helvetica", sans-serif;
+    width: 100%;
+}
+
+.descricao h2 {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.descricao p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.descricao-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .imagem-matriz {
@@ -83,6 +106,16 @@ section {
     justify-content: center;
     background-color: #f7f7f7;
     font-family: "Helvetica", sans-serif;
+}
+
+.links-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .links a {
@@ -112,12 +145,14 @@ section {
 }
 
 .seta { 
-    width: 15px;
-    height: 10px;
+    width: 22px;
+    height: 22px;
     padding-right: 10px;
     align-self: center;
     margin-right: 3px;
     filter: brightness(0%);
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .semestre-titulo {
@@ -127,6 +162,8 @@ section {
     border-bottom: solid 1px rgb(212, 212, 212);
     box-sizing: border-box;
     padding: 20px 0px 20px 0px;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .semestre-titulo:hover {
@@ -156,6 +193,19 @@ section {
     font-family: "Helvetica", sans-serif;
 }
 
+.disciplina h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.disciplina p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
 .disciplina:last-child { 
     margin-bottom: 0; 
 }
@@ -166,6 +216,8 @@ section {
     border-bottom: solid 1px rgb(212, 212, 212);
     box-sizing: border-box;
     padding: 20px 0px 20px 0px;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .optativa:hover{
@@ -184,11 +236,62 @@ section {
     padding: 20px;
 }
 
+.optativa-descricao p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
 .atividades-complementares {
     display: flex;
     flex-direction: column;
     text-align: justify;
     background-color: #f7f7f7;
+    width: 100%;
+}
+
+.atividades-complementares h2 {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.atividades-complementares h3 {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.atividades-complementares p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.atividades-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.disciplinas-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grade-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.estagios-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .atividades-documento {
@@ -199,13 +302,15 @@ section {
     text-align: center;
     width: 200px;
     height: 60px;
-    margin: 10px;
+    margin: 10px auto;
     border-radius: 50px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.178);
     border: solid 2px rgb(207, 207, 207);
     background-color: white;  
     text-decoration: none;
-    color: black;   
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .atividades-documento:hover {
@@ -214,8 +319,35 @@ section {
     color: white;
 }
 
+.estagios h2 {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.estagios h3 {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.estagios p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
 .estagios ul {
     margin-left: 30px;
+    margin-bottom: 18px;
+}
+
+.estagios li {
+    margin-bottom: 8px;
+    line-height: 1.7;
 }
 
 .form {
@@ -260,6 +392,20 @@ section {
     .links a, .atividades-documento {
         width: 200px;
         height: 100px;
+        font-size: 1rem;
+    }
+
+    .semestre-titulo {
+        font-size: 1.2rem;
+    }
+
+    .optativa {
+        font-size: 1.2rem;
+    }
+
+    .seta {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -286,6 +432,20 @@ section {
     .links a, .atividades-documento {
         width: 190px;
         height: 80px;
+        font-size: 0.95rem;
+    }
+
+    .semestre-titulo {
+        font-size: 1.1rem;
+    }
+
+    .optativa {
+        font-size: 1.1rem;
+    }
+
+    .seta {
+        width: 21px;
+        height: 21px;
     }
 }
 
@@ -304,6 +464,10 @@ section {
         font-size: 0.9rem;
     }
 
+    .descricao-container, .links-container, .atividades-container, .disciplinas-container, .grade-container, .estagios-container {
+        padding: 0 15px;
+    }
+
     .imagem-matriz img{
         width: 600px;
         height: auto;
@@ -316,5 +480,19 @@ section {
     .links a, .atividades-documento {
         width: 150px;
         height: 80px;
+        font-size: 0.85rem;
+    }
+
+    .semestre-titulo {
+        font-size: 1rem;
+    }
+
+    .optativa {
+        font-size: 0.9rem;
+    }
+
+    .seta {
+        width: 18px;
+        height: 18px;
     }
 }

@@ -57,10 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>  
 <body>  
     <?php include '../componentes/header.php'; ?>
-
-    <figure class="banner">  
-        <h1><b>Mural dos Estudantes</b></h1>  
-    </figure>  
+    <?php 
+        include '../componentes/banner.php';
+        banner('Mural dos Estudantes', '../Imagens/Sou Aluno/faxinha.png');
+    ?>
     <main>  
         <h2>Informe seu login e senha para acessar o Mural dos Estudantes</h2>  
         

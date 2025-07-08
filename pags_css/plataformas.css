@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     background-color: white;
     font-family: "Helvetica", sans-serif;
+    overflow-x: hidden;
 }
 
 main {
@@ -411,12 +412,214 @@ section {
 
 /* telas pequenas (abaixo de 768px) */
 @media (max-width: 768px) {
+    /* Ajustes gerais */
+    section {
+        padding: 15px;
+    }
+
     .banner {
-        height: 100px;
-        font-size: 1.0rem;
+        height: 80px;
+        font-size: 0.9rem;
     }
 
     .plataformas-titulo{
+        font-size: 0.9rem;
+    }
+
+    .suap, .ava, .email, .carteira, .bibliotecas {
+        font-size: 0.85rem;
+    }
+
+    /* Seção SUAP */
+    .suap {
+        padding: 15px;
+    }
+
+    .suap-corpo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .suap-corpo img {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .suap-texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .suap-texto a {
+        font-size: 1.2rem;
+        margin: 15px 0;
+    }
+
+    .suap-elementos {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .suap-bloco {
+        width: 120px;
+        height: 45px;
+        font-size: 0.7rem;
+        letter-spacing: 0.2px;
+        padding: 6px 4px;
+        margin: 3px;
+    }
+
+    .suap-acesso {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .suap-acesso ol {
+        margin-left: 20px;
+    }
+
+    /* Seção AVA */
+    .ava {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .ava-link {
+        width: 60%;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Seção Email */
+    .email {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .email img {
+        width: 15%;
+        margin-bottom: 15px;
+    }
+
+    .email-texto {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .email-recuperacao {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .email-recuperacao ol {
+        margin-left: 20px;
+    }
+
+    /* Seção Carteira */
+    .carteira {
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .carteira img {
+        width: 25%;
+        margin-bottom: 15px;
+    }
+
+    .carteira-texto {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #carteira-link {
+        width: 60%;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Seção Bibliotecas */
+    .bibliotecas {
+        padding: 15px;
+    }
+
+    .bibliotecas img {
+        width: 60%;
+        margin: 15px 0;
+    }
+
+    .biblioteca-campus {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .biblioteca-virtual {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .biblioteca-blocos {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .biblioteca-item {
+        min-width: auto;
+        width: 100%;
+        margin: 8px 0;
+        padding: 15px;
+    }
+
+    .biblioteca-texto {
+        padding: 10px;
+        text-align: center;
+    }
+
+    #biblioteca-botao {
+        width: 70%;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .biblioteca-tutorial {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .biblioteca-tutorial ol {
+        margin-left: 20px;
+    }
+
+    /* Ajustes de links e imagens */
+    .biblioteca-links, .biblioteca-links-ext {
+        justify-content: center;
+        align-items: center;
+        margin: 8px 0;
+    }
+
+    .biblioteca-links img, .biblioteca-links-ext img {
+        width: 18px;
+        margin-right: 8px;
+    }
+}
+
+/* Telas muito pequenas (abaixo de 480px) */
+@media (max-width: 480px) {
+    section {
+        padding: 10px;
+    }
+
+    .banner {
+        height: 60px;
         font-size: 0.8rem;
     }
 
@@ -424,25 +627,106 @@ section {
         font-size: 0.8rem;
     }
 
-    .suap-texto p {
-        margin-top: 20px;
+    .suap-corpo img {
+        width: 80%;
     }
 
-    .suap-acesso{
-        margin-top: 100px;
+    .suap-texto a {
+        font-size: 1rem;
     }
 
     .suap-bloco {
-        width: 110px;
-        height: 50px;
-        font-size: 0.75rem;
-        letter-spacing: 0.3px;
-        padding: 8px 6px;
-        margin: 4px;
+        width: 100px;
+        height: 40px;
+        font-size: 0.65rem;
+        padding: 5px 3px;
     }
 
-    .biblioteca-tutorial{
-        width: 90%;
+    .ava-link {
+        width: 80%;
+        font-size: 0.8rem;
     }
 
+    .email img {
+        width: 20%;
+    }
+
+    .carteira img {
+        width: 35%;
+    }
+
+    #carteira-link {
+        width: 80%;
+        font-size: 0.8rem;
+    }
+
+    .bibliotecas img {
+        width: 80%;
+    }
+
+    #biblioteca-botao {
+        width: 85%;
+        font-size: 0.8rem;
+    }
+
+    .biblioteca-item {
+        padding: 12px;
+    }
+
+    .biblioteca-links img, .biblioteca-links-ext img {
+        width: 16px;
+    }
+
+    /* Melhorias para acessibilidade em dispositivos móveis */
+    .suap-texto a, .ava-link, #carteira-link, #biblioteca-botao {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+    }
+
+    .suap-bloco {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+
+    .biblioteca-links-ext {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+}
+
+/* Melhorias gerais para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Melhorar espaçamento para toque */
+    .suap-texto a, .ava-link, #carteira-link, #biblioteca-botao {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+    }
+
+    .suap-bloco {
+        min-height: 44px;
+        touch-action: manipulation;
+        cursor: pointer;
+    }
+
+    .biblioteca-links-ext {
+        min-height: 44px;
+        touch-action: manipulation;
+        cursor: pointer;
+    }
+
+    /* Melhorar legibilidade */
+    p, li {
+        line-height: 1.6;
+    }
+
+    /* Ajustar espaçamentos para melhor leitura */
+    .suap-acesso, .email-recuperacao, .biblioteca-tutorial {
+        line-height: 1.5;
+    }
 }

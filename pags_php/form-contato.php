@@ -13,12 +13,14 @@
 <body>  
     <?php include '../componentes/header.php'; ?>
 
-    <figure class="banner">  
-        <h1><b>Entre em Contato Conosco</b></h1>  
-    </figure>  
+    <?php 
+        include '../componentes/banner.php';
+        banner('Entre em Contato Conosco', '../Imagens/Sou Aluno/faxinha.png');
+    ?> 
     <main>  
-        <h2>Envie sua dúvida ou sugestão para nós.</h2>  
+        <h2 class="espaco-topo">Envie sua dúvida ou sugestão para nós.</h2>  
         <h3>Assim que possível ela será respondida.</h3>  
+        <div class="form-contato-container">
         <form id="contactForm">  
             <div class="form-contato">  
                 <p>Nome*:</p>  
@@ -39,6 +41,7 @@
             <div class="obrcamp">* Campos obrigatórios.</div>  
             <br><button type="submit" class="botao">Enviar</button></br>  
         </form>  
+        </div>
     </main>  
     <div id="faixa"></div>
     <?php include '../componentes/footer.php'; ?>

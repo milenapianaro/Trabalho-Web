@@ -66,7 +66,7 @@ $docentes_administracao = [
     ["nome" => "Josué Alexandre Sander", "email" => "josue.sander@ifpr.edu.br"],
     ["nome" => "Marcos Aurélio Nascimento", "email" => "marcos.nascimento@ifpr.edu.br"],
     ["nome" => "Newton Claizoni Moreno de Melo", "email" => "newton.claizoni@ifpr.edu.br"],
-    ["nome" => "Regina Maris Pinheiro D’Azevedo", "email" => "regina.pinheiro@ifpr.edu.br"],
+    ["nome" => "Regina Maris Pinheiro D'Azevedo", "email" => "regina.pinheiro@ifpr.edu.br"],
     ["nome" => "Roberto Carlos Dalongaro", "email" => "roberto.dalongaro@ifpr.edu.br"],
     ["nome" => "William José Borges", "email" => "william.borges@ifpr.edu.br"],
 ];
@@ -83,11 +83,12 @@ $docentes_administracao = [
 <body>
     <?php include '../componentes/header.php'; ?>
     <main>
-        <figure class="banner">
-            <h1><b>Contatos</b></h1>
-        </figure>
-
+        <?php
+                include '../componentes/banner.php';
+                banner('E-mails e Atendimento', '../Imagens/Sou Aluno/faxinha.png');
+        ?>
         <section class="atendimento">
+            <div class="atendimento-container">
             <h2>Atendimento aos Alunos</h2>
             <p>No IFPR, tanto a Secretaria quanto os professores possuem horários exclusivos para atendimento. Normalmente, os professores estão disponíveis para agendamentos em um ou dois períodos na semana (duas tardes, por exemplo), para tratar de assuntos relacionados aos conteúdos trabalhados em sala.</p>
             <p>A Secretaria também disponibiliza horários específicos para atender às demandas dos alunos, como solicitações de documentos, orientações acadêmicas e outros serviços administrativos.</p>
@@ -95,6 +96,7 @@ $docentes_administracao = [
             <div class="botoes">
                 <a href="https://docs.google.com/spreadsheets/d/1q0Fh4VAwX_Nj3b_2uEQD-7zBQGXVz3W5iOHk-0r7Pxk/edit#gid=996102884" target="_blank">Horário de Atendimento dos Professores</a>
                 <a href="https://ifpr.edu.br/pinhais/institucional/secretaria-academica/secretaria-academica/" target="_blank">Horário de Atendimento da Secretaria</a>
+            </div>
             </div>
         </section>
 
@@ -158,5 +160,3 @@ $docentes_administracao = [
         <div id="faixa"></div>
     </main>
     <?php include '../componentes/footer.php'; ?>
-</body>
-</html>

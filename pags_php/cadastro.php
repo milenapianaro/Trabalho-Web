@@ -10,12 +10,13 @@
 </head>
 <body>
     <?php include '../componentes/header.php'; ?>
+    <?php 
+            include '../componentes/banner.php';
+            banner('Mural dos Estudantes', '../Imagens/Sou Aluno/faxinha.png');
+    ?> 
+    <h2 class="espaco-topo">Cadastro de Usuário</h2>
 
-    <figure class="banner">  
-        <h1><b>Faça seu Cadastro </b></h1>  
-    </figure>  
-    <h2 style="text-align:center;">Cadastro de Usuário</h2>
-
+    <div class="cadastro-container">
     <form method="POST" action="cadastro_usuario.php">
         <label for="nome_completo">Nome completo:</label>
         <input type="text" id="nome_completo" name="nome_completo" required>
@@ -41,6 +42,7 @@
 
         <button type="submit">Cadastrar</button>
     </form>
+    </div>
 
     <?php include '../componentes/footer.php'; ?>
 </body>
