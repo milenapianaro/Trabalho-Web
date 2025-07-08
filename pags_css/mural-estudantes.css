@@ -105,7 +105,7 @@ main {
     padding-bottom: 0;
     background: #fff;
     min-height: 0;
-    height: 400px; /* Altura fixa para o container de mensagens */
+    height: 400px; 
 }
 
 .mensagem-vazia {
@@ -232,7 +232,7 @@ main {
     text-align: right;
 }
 
-/* Input para nova mensagem */
+
 .input-barra {
     width: 100%;
     background-color: #fff;

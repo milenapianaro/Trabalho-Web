@@ -1,14 +1,12 @@
 <?php
 session_start();
-require_once '../conexao.php'; // Conexão com o banco
+require_once '../conexao.php'; 
 
-// Verificar se o usuário já está logado
 if (isset($_SESSION['usuario_logado']) && $_SESSION['usuario_logado'] === true) {
     header('Location: mural-estudantes.php');
     exit();
 }
 
-// Processar o formulário de login
 $erro = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';

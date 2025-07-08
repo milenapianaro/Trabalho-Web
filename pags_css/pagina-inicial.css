@@ -161,8 +161,6 @@ main {
     filter: brightness(40%) sepia(50%) saturate(1000%) hue-rotate(90deg); 
 }
 
-/* media Queries */
-
 /* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     main {

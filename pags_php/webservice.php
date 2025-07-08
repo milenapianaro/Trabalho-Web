@@ -21,7 +21,7 @@
         })
         .then(data => {
             const container = document.getElementById('lista-usuarios');
-            container.innerHTML = ''; // limpa "Carregando..."
+            container.innerHTML = ''; 
 
             if (data.length === 0) {
                 container.textContent = "Nenhum usuário encontrado.";

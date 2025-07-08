@@ -300,7 +300,6 @@ input.controle_form {
     }
 }
 
-/* ===== Melhorias para o formulário de login do mural ===== */
 .form-login {
     max-width: 400px;
     margin: 0 auto 30px auto;
@@ -377,7 +376,6 @@ input.controle_form {
     }
 }
 
-/* ===== Padronização visual para formulário de contato ===== */
 .form-contato-container {
     max-width: 1100px;
     margin: 0 auto;

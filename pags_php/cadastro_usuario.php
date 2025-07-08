@@ -8,7 +8,6 @@ $email = $_POST['email'] ?? '';
 $matricula = $_POST['matricula'] ?? '';
 $senha = $_POST['senha'] ?? '';
 
-// Validação simples
 if (empty($nome) || empty($email) || empty($senha)) {
   echo "Por favor, preencha todos os campos obrigatórios.";
   exit;

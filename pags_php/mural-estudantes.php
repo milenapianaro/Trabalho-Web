@@ -40,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
                     $stmt->bind_param("sss", $_SESSION['email_usuario'], $_SESSION['email_usuario'], $fileName);
                     $stmt->execute();
                     
-                    // Redirecionar para evitar reenvio da imagem
                     header('Location: mural-estudantes.php' . (isset($_GET['filtro']) ? '?filtro=' . $_GET['filtro'] : ''));
                     exit();
                 }
@@ -51,7 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
 
 $filtro = $_GET['filtro'] ?? 'recentes';
 
-// Buscar mensagens do banco de dados
 $orderBy = ($filtro === 'antigas') ? 'ASC' : 'DESC';
 $stmt = $conn->prepare("SELECT id, usuario_email, usuario_nome, mensagem, tipo, data_criacao FROM mensagens ORDER BY data_criacao $orderBy");
 $stmt->execute();

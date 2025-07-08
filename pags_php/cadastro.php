@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">   
     <link rel="stylesheet" href="../pags_css/header&footer.css"> 
-    <link rel="stylesheet" href="../pags_css/cadastro.css"> <!-- Novo arquivo separado -->
+    <link rel="stylesheet" href="../pags_css/cadastro.css"> 
     <title>Cadastro de Usuário</title>    
 </head>
 <body>

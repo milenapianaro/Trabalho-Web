@@ -360,8 +360,6 @@ section {
     background-color: rgb(0, 134, 40);
 }
 
-/* media query */
-
 /* telas grandes (1920px e acima) */
 @media (min-width: 1920px) {
     .banner {

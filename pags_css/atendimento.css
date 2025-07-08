@@ -74,7 +74,7 @@ section {
 
 .botoes a {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
+    align-items: center; 
     width: 200px;
     height: 80px;
     margin: 10px;

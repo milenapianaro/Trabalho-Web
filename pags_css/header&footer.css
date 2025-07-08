@@ -5,8 +5,6 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
-/* ===== CABEÇALHO PRINCIPAL ===== */
 .cabecalho-site {
     position: sticky;
     top: 0;
@@ -30,7 +28,6 @@
     border-bottom-color: #e9e9e9;
 }
 
-/* ===== LOGO ===== */
 .logo-cabecalho {
     display: flex;
     align-items: center;
@@ -44,7 +41,6 @@
     transition: all 0.3s ease;
 }
 
-/* ===== NAVEGAÇÃO PRINCIPAL ===== */
 .navegacao-cabecalho {
     display: flex;
     align-items: center;
@@ -86,7 +82,6 @@
     filter: brightness(70%) invert(48%) sepia(100%) saturate(7500%) hue-rotate(90deg);
 }
 
-/* ===== BOTÃO MENU MOBILE ===== */
 .botao-menu {
     display: none;
     flex-direction: column;
@@ -124,7 +119,6 @@
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* ===== MENU SUSPENSO ===== */
 .menu-suspenso {
     display: none;
     position: absolute;
@@ -164,7 +158,6 @@
     transform: translateY(-1px);
 }
 
-/* ===== OVERLAY ===== */
 .overlay-menu {
     position: fixed;
     top: 0;
@@ -183,7 +176,6 @@
     visibility: visible;
 }
 
-/* ===== MENU LATERAL ===== */
 .menu-lateral {
     position: fixed;
     top: 0;
@@ -200,7 +192,6 @@
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajustes específicos para tablets */
 @media (min-width: 481px) and (max-width: 768px) {
     .menu-lateral {
         width: 70%;
@@ -310,7 +301,6 @@
     margin-right: 0.75rem;
 }
 
-/* ===== RODAPÉ ===== */
 .footer {
     background-color: #333;
     display: flex;
@@ -344,7 +334,6 @@
 .footer .facebook { order: 2; justify-content: center; }
 .footer .institucional { order: 3; }
 
-/* ===== MEDIA QUERIES ===== */
 
 /* Telas muito grandes (1920px+) */
 @media (min-width: 1920px) {

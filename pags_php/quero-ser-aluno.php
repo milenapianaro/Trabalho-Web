@@ -55,7 +55,6 @@
             include '../componentes/footer.php';
         ?> 
         <script>
-        // Acordeão responsivo para mobile
         function acordeaoMobile() {
             if(window.innerWidth < 600) {
                 document.querySelectorAll('.acordeao-titulo').forEach(function(titulo) {
@@ -72,11 +71,9 @@
                         }
                     };
                 });
-                // Esconde todos os conteúdos inicialmente
                 document.querySelectorAll('.secao-conteudo').forEach(function(c) { c.classList.remove('aberta'); });
                 document.querySelectorAll('.acordeao-titulo').forEach(function(t) { t.classList.remove('aberto'); });
             } else {
-                // Em telas grandes e tablet, mostra tudo aberto e esconde botões
                 document.querySelectorAll('.acordeao-titulo').forEach(function(t) { t.style.display = 'none'; t.classList.remove('aberto'); });
                 document.querySelectorAll('.secao-conteudo').forEach(function(c) { c.style.display = 'block'; c.classList.remove('aberta'); });
             }

@@ -1,6 +1,4 @@
 <?php
-// === Dados dos contatos ===
-
 // Seções Principais
 $principal_sections = [
     ["cargo" => "Coordenadoria do Curso de GTI", "contatos" => [["nome" => "William Simão de Deus", "email" => "sup.gti.pinhais@ifpr.edu.br"]]],
@@ -101,7 +99,6 @@ $docentes_administracao = [
         </section>
 
         <section class="contatos">
-            <!-- Seções Principais -->
             <article class="contatos-tecnicos">
                 <h2 class="tecnicos-titulo">Seções Principais</h2>
                 <table class="tecnicos-tabela"><tbody>
@@ -130,7 +127,6 @@ $docentes_administracao = [
                 </tbody></table>
             </article>
 
-            <!-- Docentes -->
             <article class="contatos-docentes">
                 <div class="docentes-tecnologia">
                     <h2 class="tecnologia-titulo">Docentes de Tecnologia</h2>
